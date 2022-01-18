@@ -1,0 +1,195 @@
+.youth-engaging-events {
+  header {
+    .text {
+      p {
+        font-size: 37.6054rem;
+        max-width: 2248.8009rem;
+        &:first-of-type {
+          margin-top: 109.0556rem;
+        }
+        &:not(:last-of-type) {
+          margin-bottom: 120.3372rem;
+        }
+        b,
+        strong {
+          font-weight: $bold;
+        }
+      }
+    }
+  }
+  .content {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 221.8717rem;
+      height: 221.8717rem;
+      background: #ec2028;
+      bottom: 0;
+      right: -221.8717rem;
+    }
+    .form-wrapper {
+      background: #08338e;
+      width: 3172.0126rem;
+      flex: 0 0 auto;
+      padding-top: 195.5479rem;
+      padding-left: 233.1533rem;
+      // padding-right: 291.4416rem;
+      padding-bottom: 112.8161rem;
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        color: #fff;
+
+        .col-6 {
+          flex: 0 0 auto;
+          width: 50%;
+        }
+        .col-12,
+        h2 {
+          flex: 0 0 auto;
+          width: 100%;
+          padding: 5.6408rem;
+        }
+        .col-4 {
+          padding: 5.6408rem;
+          flex: 0 0 auto;
+          width: 33.3333333333%;
+        }
+        .col-6,
+        .col-12 {
+          padding-right: 180.5058rem;
+        }
+        input[type="text"],
+        input[type="number"],
+        textarea,
+        select {
+          padding: 37.6054rem 56.408rem;
+          font-size: 37.6054rem;
+          border: none;
+          background: #fff;
+          resize: none;
+          width: 100%;
+          font-family: $roboto;
+          color: rgba(0, 0, 0, 1);
+          &:placeholder {
+            color: rgba(0, 0, 0, 0.7);
+          }
+        }
+        input[type="date"],
+        input[type="time"] {
+          padding: 37.6054rem 110.9358rem 37.6054rem 54.5278rem;
+          font-size: 37.6054rem;
+          border: none;
+          background: #fff;
+        }
+        input[type="radio"] {
+          -webkit-appearance: auto;
+          appearance: auto;
+        }
+        h2 {
+          font-size: 67.6897rem;
+          line-height: 1.3;
+          padding-bottom: 109.0556rem;
+          border-bottom: 5.6408rem solid #fff;
+          margin-bottom: 92.1331rem;
+          font-weight: $bold;
+          max-width: calc(100% - 180.5058rem);
+        }
+        label {
+          font-size: 37.6054rem;
+          font-weight: $bold;
+          margin-bottom: 39.4856rem;
+          margin-top: 56.408rem;
+          display: block;
+        }
+      }
+    }
+
+    .side-decoration-youth {
+      background: green;
+    }
+  }
+  .contact-form {
+    padding: 154.182rem 755.8678rem 150.4215rem 231.273rem;
+    position: relative;
+    overflow-x: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 221.8717rem;
+      height: 221.8717rem;
+      background: #08338e;
+      top: 0;
+      right: -44rem;
+    }
+    .heading {
+      color: #0f2765;
+      margin-bottom: 86.4923rem;
+    }
+    form {
+      .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: stretch;
+        justify-content: center;
+        .col {
+          width: 1224.0546rem;
+          flex: 0 0 auto;
+          // odd selector
+          margin-bottom: 60.1686rem;
+          &:nth-of-type(odd) {
+            margin-right: 120.8649rem;
+          }
+          label {
+            font-weight: $bold;
+            text-transform: uppercase;
+            font-size: 37.6054rem;
+            margin-bottom: 37.6054rem;
+            color: #0f2765;
+            display: block;
+          }
+          input {
+            width: 100%;
+            height: 122.2174rem;
+            border: 1px solid #08338e;
+            padding: 37.6054rem 56.408rem;
+            font-size: 37.6054rem;
+          }
+          button {
+            width: 100%;
+            height: 122.2174rem;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            align-items: center;
+            font-weight: $bold;
+            color: #fff;
+            background: #08338e;
+            @include borderRadius(0);
+            border: none;
+            padding: 0 56.408rem;
+            position: relative;
+            bottom: -109rem;
+            cursor: pointer;
+            &:hover {
+              background: $lblue;
+            }
+          }
+        }
+      }
+      &.invalid {
+        .container {
+          .col {
+            button {
+              bottom: -86rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

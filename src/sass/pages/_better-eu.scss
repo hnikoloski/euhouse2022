@@ -1,0 +1,92 @@
+.page-template-better-eu-template {
+  .side-decoration {
+    &::before {
+      top: 28%;
+    }
+  }
+  .container {
+    padding-top: 189.9071rem;
+    padding-bottom: 317.7653rem;
+
+    .content {
+      flex: 0 0 100%;
+      width: 100%;
+      .heading,
+      p,
+      .subtitle {
+        text-align: center;
+      }
+      .heading {
+        margin-bottom: 78.9713rem;
+        @include for-phone {
+          margin-bottom: 240rem;
+        }
+      }
+      p {
+        max-width: 2301.4484rem;
+        margin-left: auto;
+        margin-right: auto;
+        &:not(:last-of-type) {
+          margin-bottom: 65.8094rem;
+        }
+        &:last-of-type {
+          margin-bottom: 133.499rem;
+          @include for-phone {
+            margin-bottom: 750rem;
+          }
+        }
+        @include for-phone {
+          max-width: 100%;
+        }
+      }
+      .subtitle {
+        margin-bottom: 82.7318rem;
+        font-size: 67.6897rem;
+        font-weight: $bold;
+        @include for-phone {
+          margin-bottom: 220rem;
+          font-size: 240rem;
+        }
+      }
+      .wpcf7 {
+        margin-top: 0;
+        width: 100%;
+        * {
+          font-family: $roboto;
+        }
+        p {
+          max-width: 100%;
+        }
+        textarea {
+          background: rgba(255, 255, 255, 0.58);
+          border: none;
+          color: $dblue;
+          &::placeholder {
+            color: $dblue;
+            opacity: 0.9;
+          }
+          &:focus {
+            background: #fff;
+          }
+        }
+        button {
+          padding: 37.6054rem 94.0134rem;
+          border: none;
+          color: #fff;
+          font-weight: $bold;
+          font-size: 33.8448rem;
+          line-height: 1.2;
+          letter-spacing: 0.05em;
+          @include for-phone {
+            font-size: 160rem;
+            padding: 160rem 500rem;
+          }
+          i {
+            margin-left: 37.6054rem;
+            font-family: "Font Awesome 5 Brands";
+          }
+        }
+      }
+    }
+  }
+}

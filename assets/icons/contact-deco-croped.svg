@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="234" height="238" viewBox="0 0 234 238">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1" data-name="Rectangle 1" width="234" height="238" transform="translate(0 -3)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="contact-deco-croped" transform="translate(0 3)" clip-path="url(#clip-path)">
+    <path id="Path_1" data-name="Path 1" d="M0-2.925c0,64.16,52.314,116.334,117,116.334C117,49.249,64.686-2.925,0-2.925Z" fill="#ffcb0c"/>
+    <path id="Path_2" data-name="Path 2" d="M117,118.283H0V234.616H117Z" fill="#fff"/>
+    <path id="Path_3" data-name="Path 3" d="M58.68,202.184a28,28,0,0,0,25.8-25.734,28,28,0,0,0,25.8,25.734,28,28,0,0,0-25.8,25.734C83.423,214.522,72.465,203.594,58.68,202.184Z" fill="#08338e"/>
+    <path id="Path_4" data-name="Path 4" d="M6.719,202.184a28,28,0,0,0,25.8-25.734,28,28,0,0,0,25.8,25.734,28,28,0,0,0-25.8,25.734C31.462,214.522,20.5,203.594,6.719,202.184Z" fill="#08338e"/>
+    <path id="Path_5" data-name="Path 5" d="M58.68,150.715a28,28,0,0,0,25.8-25.734,28,28,0,0,0,25.8,25.734,28,28,0,0,0-25.8,25.734A28,28,0,0,0,58.68,150.715Z" fill="#08338e"/>
+    <path id="Path_6" data-name="Path 6" d="M6.719,150.715a28,28,0,0,0,25.8-25.734,28,28,0,0,0,25.8,25.734,28,28,0,0,0-25.8,25.734A28,28,0,0,0,6.719,150.715Z" fill="#08338e"/>
+    <path id="Path_7" data-name="Path 7" d="M117,118.809,234,234.832H117Z" fill="#ec2028"/>
+  </g>
+</svg>

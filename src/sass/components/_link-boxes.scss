@@ -1,0 +1,115 @@
+#link-boxes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
+  .single-box {
+    flex: 1 0 33.33%;
+    width: 33.33%;
+    min-height: 724.0913rem;
+    border: 5.6408rem solid #fff;
+    padding: 191.7874rem 244.4349rem;
+    text-align: center;
+    position: relative;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: #08338e;
+      opacity: 0.9;
+      mix-blend-mode: multiply;
+      z-index: 1;
+    }
+    .content {
+      position: relative;
+      z-index: 9;
+      h3 {
+        font-size: 67.6897rem;
+        font-weight: $bold;
+        color: #fff;
+        padding-bottom: 30.0843rem;
+        margin-bottom: 39.4856rem;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          @include hor-center();
+          width: 100%;
+          height: 16.9224rem;
+          background: url("../../assets/icons/fancy-border.svg");
+          @include bg-props(cover, center, no-repeat);
+        }
+      }
+      p {
+        font-size: 33.8448rem;
+        color: #fff;
+        margin-bottom: 73.3305rem;
+        letter-spacing: 0.02em;
+        line-height: 1.2;
+      }
+    }
+    &.fancy {
+      padding: 0;
+      .content {
+        padding: 74.978rem 114.6964rem 120.3372rem 114.6964rem;
+        width: 706.9809rem;
+        position: absolute;
+        @include abs-center();
+        h3 {
+          padding-bottom: 0;
+          margin-bottom: 30.0843rem;
+          &::after {
+            display: none;
+          }
+        }
+        .btn {
+          color: #fff;
+        }
+      }
+      &.blue {
+        &::before {
+          background: #08338e;
+          opacity: 0.6;
+          mix-blend-mode: multiply;
+        }
+        .content {
+          background: url("../../assets/icons/blue-box-bg.svg");
+          @include bg-props(cover, center, no-repeat);
+        }
+      }
+      &.yellow {
+        &::before {
+          background: $yellow;
+          opacity: 0.6;
+          mix-blend-mode: multiply;
+        }
+        .content {
+          background: url("../../assets/icons/yellow-box-bg.svg");
+          @include bg-props(cover, center, no-repeat);
+        }
+      }
+      &.red {
+        &::before {
+          background: #ec2028;
+          opacity: 0.6;
+          mix-blend-mode: multiply;
+        }
+        .content {
+          background: url("../../assets/icons/red-box-bg.svg");
+          @include bg-props(cover, center, no-repeat);
+        }
+      }
+    }
+  }
+}

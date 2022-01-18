@@ -1,0 +1,34 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  flex: 0 0 100%;
+  width: 100%;
+  .page {
+    &-numbers {
+      font-size: 33.8448rem;
+      font-weight: $medium;
+      width: 109.0556rem;
+      height: 109.0556rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #08338e;
+      @include borderRadius(50%);
+      &:not(:last-of-type),
+      &.current {
+        margin-right: 30.0843rem;
+      }
+      &:hover,
+      &.current {
+        &:not(.dots) {
+          background: #0f2765;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

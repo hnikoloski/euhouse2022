@@ -1,0 +1,58 @@
+.btn {
+  font-size: 33.844829rem;
+  padding: 37.605366rem 88.372609rem;
+  width: fit-content;
+  width: -moz-fit-content;
+  display: block;
+  font-weight: $bold;
+  cursor: pointer;
+  &-blue {
+    background: #08338e;
+    color: #fff;
+    i {
+      margin-left: 22.563219rem;
+    }
+    &:hover {
+      background: $lblue;
+    }
+  }
+  &-white {
+    background: #fff;
+    color: $dblue;
+    a {
+      color: $dblue;
+    }
+    i {
+      margin-left: 22.563219rem;
+    }
+    &:hover {
+      background: $lblue;
+    }
+  }
+  &-icon {
+    i {
+      margin: 0;
+      line-height: 1;
+    }
+  }
+  &-squared {
+    padding: 47.006707rem;
+    font-size: 0;
+    i {
+      font-size: 22.563219rem;
+    }
+  }
+  &-blank {
+    padding: 0;
+    color: #000;
+    font-weight: $bold;
+    i {
+      margin-left: 22.563219rem;
+    }
+    &:hover {
+      i {
+        margin-left: 30.084292rem;
+      }
+    }
+  }
+}

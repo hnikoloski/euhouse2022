@@ -1,0 +1,110 @@
+body.single-gallery {
+  header {
+    margin-bottom: 176.7452rem;
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+      margin-bottom: 131.6188rem;
+      p.heading {
+        font-size: 37.6054rem;
+        padding: 28.204rem 65.8094rem;
+      }
+      a {
+        font-size: 40.689rem;
+        font-weight: $bold;
+        color: #0f2765;
+        i {
+          margin-right: 31.9646rem;
+        }
+        &:hover {
+          color: $lblue;
+          i {
+            color: $lblue;
+            margin-right: 45rem;
+          }
+        }
+      }
+    }
+
+    .the-content {
+      .heading {
+        padding: 0;
+        margin-bottom: 75.2107rem;
+      }
+      p {
+        font-size: 45.1264rem;
+        line-height: 1.5;
+        &:not(:last-of-type) {
+          margin-bottom: 47.0067rem;
+        }
+      }
+    }
+  }
+  main {
+    padding-left: 225.6322rem;
+    padding-top: 218.1111rem;
+    padding-bottom: 259.477rem;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #08338e;
+      height: 100%;
+      width: 90%;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background: #0f2765;
+      height: 30%;
+      width: 10%;
+    }
+    .gallery {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        left: -225.6322rem;
+        top: -225.6322rem;
+        width: 225.6322rem;
+        height: 225.6322rem;
+        background: url("../../assets/icons/stars-white-bg.svg");
+        @include bg-props(cover, center, no-repeat);
+      }
+      .swiper-btns-wrapper {
+        position: absolute;
+        @include ver-center();
+        right: 235.0335rem;
+        z-index: 9;
+        .swiper-button {
+          width: 116.5766rem;
+          height: 116.5766rem;
+          color: #fff;
+          background: #08338e;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          &:hover {
+            background: $lblue;
+          }
+          &:last-of-type {
+            margin-top: 37.6054rem;
+          }
+        }
+      }
+      .swiper-slide {
+        height: auto;
+        img {
+          background: #fff;
+        }
+      }
+    }
+  }
+}

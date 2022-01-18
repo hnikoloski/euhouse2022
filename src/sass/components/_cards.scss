@@ -1,0 +1,72 @@
+.card {
+  border-top: 9.4013rem solid $yellow;
+  .img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 1005.9435rem;
+
+    .date {
+      position: absolute;
+      top: 0;
+      right: 65.8094rem;
+      background: $yellow;
+      padding: 33.8448rem 52.6475rem;
+      p {
+        font-weight: $bold;
+        color: #fff;
+        line-height: 1.1;
+        text-align: center;
+        letter-spacing: -0.015em;
+        &:first-of-type {
+          font-size: 67.6897rem;
+        }
+        &:last-of-type {
+          font-size: 45.1264rem;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  .content {
+    padding: 97.774rem 110.9358rem;
+    background: #fff;
+    .title {
+      font-size: 45.1264rem;
+      line-height: 1.3;
+      letter-spacing: 0.02em;
+      font-weight: $bold;
+      color: #000;
+      margin-bottom: 47.0067rem;
+    }
+  }
+  &-room {
+    border-top: none;
+    .img-wrapper {
+      height: 658.0939rem;
+      margin-bottom: 35.7251rem;
+    }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+      margin-bottom: 28.204rem;
+      .title {
+        color: $dblue;
+        font-size: 67.6897rem;
+        font-weight: $bold;
+      }
+      a {
+        display: block;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+    p {
+      font-size: 37.6054rem;
+      margin-bottom: 60.1686rem;
+      line-height: 1.2;
+    }
+  }
+}

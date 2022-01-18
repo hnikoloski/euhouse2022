@@ -1,0 +1,108 @@
+.site-footer {
+  margin-top: 244.4349rem;
+  .footer-top {
+    padding-top: 259.477rem;
+    padding-bottom: 188.0268rem;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      @include hor-center();
+      height: 5.6408rem;
+      width: 81%;
+      background: $dblue;
+    }
+    p {
+      font-size: 37.6054rem;
+      line-height: 2.5;
+    }
+    .logo-image {
+      width: 752.1073rem;
+      height: 184.2663rem;
+      margin-bottom: 50.7672rem;
+      img {
+        @include fullSizeImg(cover);
+      }
+    }
+    .app-store-logo {
+      width: 389.2155rem;
+      height: 120.3372rem;
+      &:hover {
+        transform: scale(1.1);
+      }
+      &:first-of-type {
+        margin-bottom: 30.0843rem;
+      }
+      img {
+        @include fullSizeImg(cover);
+      }
+    }
+    h2 {
+      font-weight: $bold;
+      color: #08338e;
+      font-size: 33.8448rem;
+      margin-bottom: 71.4502rem;
+      a {
+        font-size: inherit;
+        font-weight: inherit;
+        color: inherit;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    ul {
+      max-width: 95%;
+      li,
+      li a {
+        font-size: 33.8448rem;
+        color: #000;
+        line-height: 1.25;
+      }
+      li {
+        &:not(:last-of-type) {
+          margin-bottom: 56.408rem;
+        }
+        a {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    background: #08338e;
+    color: #fff;
+    padding-top: 33.8448rem;
+    padding-bottom: 33.8448rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    p {
+      font-size: 30.0843rem;
+      line-height: 1.53;
+      letter-spacing: -0.01em;
+    }
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      align-content: center;
+      li {
+        &:not(:last-of-type) {
+          margin-right: 197.4282rem;
+        }
+        a {
+          color: #fff;
+          font-size: 30.0843rem;
+          &:hover {
+            color: $lblue;
+          }
+        }
+      }
+    }
+  }
+}

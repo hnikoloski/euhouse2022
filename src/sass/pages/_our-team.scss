@@ -1,0 +1,93 @@
+.our-team-page {
+  .single-page-header {
+    p {
+      font-size: 37.6054rem;
+      margin-top: 94.0134rem;
+      @include for-phone {
+        font-size: 160rem;
+      }
+    }
+  }
+  .content {
+    .team-header {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: space-between;
+      margin-bottom: 129.7385rem;
+      &:not(:first-of-type) {
+        margin-top: 103.4148rem;
+      }
+      h3 {
+        font-size: 56.408rem;
+        line-height: 1.3;
+        letter-spacing: 0.02em;
+        font-weight: $bold;
+        min-width: 770.91rem;
+        @include for-phone {
+          font-size: 180rem;
+          margin-right: 150rem;
+        }
+      }
+      .separator {
+        height: 33.8448rem;
+        max-width: 100%;
+        flex: 1;
+        background: #08338e;
+      }
+    }
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      .col {
+        flex: 0 0 auto;
+        width: 25%;
+        @include for-phone {
+          width: 100%;
+          &:not(:last-of-type) {
+            margin-bottom: 300rem;
+          }
+        }
+        &:not(:nth-of-type(4n)) {
+          padding-right: 39.4856rem;
+          @include for-phone {
+            padding-right: 0;
+          }
+        }
+        .person-card {
+          margin-bottom: 103.4148rem;
+
+          .img-wrapper {
+            width: 100%;
+            height: 752.1073rem;
+            margin-bottom: 30.0843rem;
+            @include for-phone {
+              height: 3300rem;
+              margin-bottom: 50rem;
+            }
+          }
+          h4 {
+            font-size: 45.1264rem;
+            font-weight: $bold;
+            margin-bottom: 13.1619rem;
+            line-height: 1.3;
+            letter-spacing: 0.02em;
+            color: #0f2765;
+            @include for-phone {
+              font-size: 200rem;
+              margin-bottom: 50rem;
+            }
+          }
+          p {
+            line-height: 1.3;
+            letter-spacing: 0.02em;
+            font-size: 33.8448rem;
+            @include for-phone {
+              font-size: 140rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

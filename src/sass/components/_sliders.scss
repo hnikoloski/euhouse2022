@@ -1,0 +1,19 @@
+#gallery-slider {
+  .swiper-slide {
+    height: auto;
+    .card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      flex: 1 1 auto;
+    }
+    .content {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}

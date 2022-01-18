@@ -1,0 +1,55 @@
+.single-page-header {
+  position: relative;
+  margin-top: 157.9425rem;
+  margin-bottom: 176.7452rem;
+  @include for-phone {
+    padding-top: 830rem;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 139.139852rem;
+    height: 280.159973rem;
+    background: url("../../assets/icons/chevron-down-decoration.svg");
+    @include bg-props(cover, center, no-repeat);
+    @include for-phone {
+      height: 650rem;
+      width: 280rem;
+      left: 150rem;
+    }
+  }
+  .space {
+    width: 1em;
+  }
+  .heading {
+    text-transform: uppercase;
+    padding: 5.6408rem 41.3659rem;
+    line-height: 1;
+
+    &.red-bg {
+      background: #ec2028;
+      color: #fff;
+    }
+    &.yellow-bg {
+      background: $yellow;
+      color: #fff;
+    }
+    &.blue-bg {
+      background: #08338e;
+      color: #fff;
+    }
+  }
+  .subtitle {
+    margin-top: 92.1331rem;
+    font-size: 37.6054rem;
+    max-width: 2651.1783rem;
+    line-height: 1.2;
+    @include for-phone {
+      margin-top: 240rem;
+      font-size: 160rem;
+      margin-bottom: 400rem;
+    }
+  }
+}

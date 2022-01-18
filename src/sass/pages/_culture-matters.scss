@@ -1,0 +1,130 @@
+.page-template-culture-matters-template {
+  .single-page-header {
+    p {
+      font-size: 37.6054rem;
+      strong,
+      b {
+        font-weight: $bold;
+      }
+      &:not(:last-of-type) {
+        margin-bottom: 56.408rem;
+      }
+    }
+  }
+  main {
+    padding: 231.273rem 231.273rem 242.5546rem 231.273rem;
+    background: #08338e;
+    display: flex;
+    max-width: 85%;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      right: -536rem;
+      bottom: 0;
+      height: calc(100% - 451.2644rem);
+      width: calc(15% + 231.273rem);
+      background: #0f2765;
+      z-index: -1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: -533.2644rem;
+      top: 0;
+      background: url("../../assets/icons/contact-deco-croped.svg");
+      @include bg-props(contain, center, no-repeat);
+      width: 613.2644rem;
+      height: 451.2644rem;
+    }
+    .single-card {
+      width: 1327.4694rem;
+      height: 894.5376rem;
+      position: relative;
+      border-top: 16.9224rem solid $yellow;
+      &:hover {
+        .card-icon {
+          top: -14rem;
+        }
+      }
+      .card-icon {
+        position: absolute;
+        top: 0;
+        right: 169.2241rem;
+        width: 188.0268rem;
+        height: 188.0268rem;
+        z-index: 9;
+        background: $yellow;
+      }
+      &.blog {
+        .card-icon {
+          background-image: url("../../assets/icons/blog-icon.svg");
+          @include bg-props(75.2107rem 75.2107rem, center, no-repeat);
+        }
+      }
+      &.podcast {
+        .card-icon {
+          background-image: url("../../assets/icons/microphone-icon.svg");
+          @include bg-props(75.2107rem 75.2107rem, center, no-repeat);
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #5279df;
+        mix-blend-mode: multiply;
+        z-index: 1;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 894.5376rem 894.5376rem;
+        border-color: transparent transparent #000 transparent;
+
+        opacity: 0.2;
+        z-index: 2;
+      }
+      &:not(:last-of-type) {
+        margin-right: 67.6897rem;
+      }
+      .content {
+        position: absolute;
+        @include ver-center();
+        width: 100%;
+        padding-left: 165.4636rem;
+        z-index: 9;
+        h3 {
+          color: #fff;
+          position: relative;
+          font-weight: $bold;
+          font-size: 127.8582rem;
+          line-height: 1.2;
+          text-transform: uppercase;
+          margin-bottom: 122.2174rem;
+          padding-bottom: 47.0067rem;
+          width: fit-content;
+          width: -moz-fit-content;
+          &::after {
+            position: absolute;
+            content: "";
+            background: url("../../assets/icons/fancy-border.svg");
+            @include bg-props(cover, center, no-repeat);
+            width: 100%;
+            height: 16.9224rem;
+            bottom: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
