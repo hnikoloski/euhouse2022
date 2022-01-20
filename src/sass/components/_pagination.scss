@@ -18,6 +18,11 @@
       align-items: center;
       color: #08338e;
       @include borderRadius(50%);
+      @include for-phone {
+        font-size: 140rem;
+        width: 440rem;
+        height: 440rem;
+      }
       &:not(:last-of-type),
       &.current {
         margin-right: 30.0843rem;

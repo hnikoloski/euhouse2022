@@ -188,7 +188,16 @@
     }
   }
 }
-
+.page-template-blog-page {
+  @include for-phone {
+    .single-page-header {
+      padding-top: 0;
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
 .blog-archive {
   display: flex;
   flex-wrap: wrap;
@@ -200,6 +209,7 @@
   padding-right: 225.6322rem;
   padding-bottom: 199.3084rem;
   position: relative;
+
   &::before {
     content: "";
     position: absolute;
@@ -209,6 +219,11 @@
     width: 85%;
     background: #08338e;
     z-index: -99;
+    @include for-phone {
+      z-index: -1;
+      width: 100%;
+      height: 56.15%;
+    }
   }
   &::after {
     content: "";
@@ -219,6 +234,9 @@
     width: 15%;
     background: #0f2765;
     z-index: -9;
+    @include for-phone {
+      display: none;
+    }
   }
   .pagination {
     margin-top: 94.0134rem;
@@ -232,27 +250,53 @@
   }
   .col-6 {
     width: 50%;
+    @include for-phone {
+      width: 100%;
+    }
   }
   .col-12 {
     width: 100%;
+    @include for-phone {
+      width: 100%;
+    }
   }
   .single-blog {
+    @include for-phone {
+      flex-direction: column;
+      margin-bottom: 280rem;
+    }
     .img-wrapper {
       width: 584.7634rem;
       height: 381.6945rem;
       flex: 0 0 auto;
+      @include for-phone {
+        height: 2160rem;
+        width: 100%;
+        margin-bottom: 0;
+      }
     }
     .content {
       padding-left: 80.8515rem;
+      @include for-phone {
+        padding-top: 160rem;
+        padding-bottom: 300rem;
+        background: #fff;
+      }
       .date {
         padding: 28.204rem 65.8094rem;
         background: #ec2028;
         margin-bottom: 43.2462rem;
+        @include for-phone {
+          padding: 100rem 220rem;
+        }
         p {
           font-size: 37.6054rem;
           font-weight: $bold;
           text-transform: uppercase;
           color: #fff;
+          @include for-phone {
+            font-size: 140rem;
+          }
         }
       }
       h2 {
@@ -261,6 +305,9 @@
         font-weight: $bold;
         color: #000;
         margin-bottom: 37.6054rem;
+        @include for-phone {
+          font-size: 234rem;
+        }
       }
     }
   }
@@ -270,15 +317,26 @@
       width: 100%;
       height: 942.0144rem;
       margin-bottom: 73.3305rem;
+      @include for-phone {
+        height: 2160rem;
+        margin-bottom: 0;
+      }
     }
     .content {
       padding-left: 0;
+      @include for-phone {
+        padding-bottom: 300rem;
+        padding-top: 160rem;
+      }
       .date {
         display: none;
       }
       h2 {
         font-size: 67.6897rem;
         margin-bottom: 75.2107rem;
+        @include for-phone {
+          font-size: 234rem;
+        }
       }
     }
   }
@@ -287,6 +345,9 @@
       display: flex;
       &:not(:last-of-type) {
         margin-bottom: 71.4502rem;
+        @include for-phone {
+          margin-bottom: 280rem;
+        }
       }
     }
   }
@@ -298,6 +359,7 @@
     align-items: flex-start;
     margin-top: 188.0268rem;
     position: relative;
+
     &::after {
       content: "";
       position: absolute;
@@ -310,21 +372,40 @@
       width: 524rem;
       height: 531.2644rem;
       z-index: -1;
+      @include for-phone {
+        display: none;
+      }
     }
     .single-blog {
       flex: 0 0 auto;
       width: calc(33.33% - 66rem);
       margin-bottom: 60.1686rem;
+      @include for-phone {
+        width: 100%;
+        margin-bottom: 280rem;
+      }
       .img-wrapper {
         width: 100%;
         height: 535.8765rem;
+        @include for-phone {
+          height: 2160rem;
+          width: 100%;
+          margin-bottom: 0;
+        }
       }
       .content {
         padding: 58.2883rem 110.9358rem;
         background: #fff;
+        @include for-phone {
+          padding-bottom: 300rem;
+          padding-top: 160rem;
+        }
         h2 {
           font-size: 45.1264rem;
           margin-bottom: 56.408rem;
+          @include for-phone {
+            font-size: 234rem;
+          }
         }
       }
     }

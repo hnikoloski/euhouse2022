@@ -2,12 +2,18 @@
   .single-page-header {
     p {
       font-size: 37.6054rem;
+      @include for-phone {
+        font-size: 160rem;
+      }
       strong,
       b {
         font-weight: $bold;
       }
       &:not(:last-of-type) {
         margin-bottom: 56.408rem;
+        @include for-phone {
+          margin-bottom: 500rem;
+        }
       }
     }
   }
@@ -17,6 +23,10 @@
     display: flex;
     max-width: 85%;
     position: relative;
+    @include for-phone {
+      max-width: 100%;
+      flex-direction: column;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -26,6 +36,9 @@
       width: calc(15% + 231.273rem);
       background: #0f2765;
       z-index: -1;
+      @include for-phone {
+        display: none;
+      }
     }
     &::after {
       content: "";
@@ -36,12 +49,23 @@
       @include bg-props(contain, center, no-repeat);
       width: 613.2644rem;
       height: 451.2644rem;
+      @include for-phone {
+        width: 1200rem;
+        height: 1200rem;
+        top: -1200rem;
+        right: 10rem;
+      }
     }
     .single-card {
       width: 1327.4694rem;
       height: 894.5376rem;
       position: relative;
       border-top: 16.9224rem solid $yellow;
+      @include for-phone {
+        width: 100%;
+        height: 2240rem;
+        border-width: 42rem;
+      }
       &:hover {
         .card-icon {
           top: -14rem;
@@ -55,17 +79,29 @@
         height: 188.0268rem;
         z-index: 9;
         background: $yellow;
+        @include for-phone {
+          width: 473rem;
+          height: 473rem;
+          top: -10rem;
+          right: 425rem;
+        }
       }
       &.blog {
         .card-icon {
           background-image: url("../../assets/icons/blog-icon.svg");
           @include bg-props(75.2107rem 75.2107rem, center, no-repeat);
+          @include for-phone {
+            @include bg-props(140rem 140rem, center, no-repeat);
+          }
         }
       }
       &.podcast {
         .card-icon {
           background-image: url("../../assets/icons/microphone-icon.svg");
           @include bg-props(75.2107rem 75.2107rem, center, no-repeat);
+          @include for-phone {
+            @include bg-props(140rem 140rem, center, no-repeat);
+          }
         }
       }
       &::before {
@@ -95,6 +131,10 @@
       }
       &:not(:last-of-type) {
         margin-right: 67.6897rem;
+        @include for-phone {
+          margin-bottom: 432rem;
+          margin-right: 0;
+        }
       }
       .content {
         position: absolute;
@@ -113,6 +153,10 @@
           padding-bottom: 47.0067rem;
           width: fit-content;
           width: -moz-fit-content;
+          @include for-phone {
+            font-size: 432rem;
+            margin-bottom: 260rem;
+          }
           &::after {
             position: absolute;
             content: "";
@@ -122,6 +166,9 @@
             height: 16.9224rem;
             bottom: 0;
             left: 0;
+            @include for-phone {
+              height: 43rem;
+            }
           }
         }
       }
