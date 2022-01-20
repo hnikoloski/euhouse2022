@@ -4,11 +4,21 @@
       p {
         font-size: 37.6054rem;
         max-width: 2248.8009rem;
+        @include for-phone {
+          font-size: 160rem;
+          max-width: 100%;
+        }
         &:first-of-type {
           margin-top: 109.0556rem;
+          @include for-phone {
+            margin-top: 250rem;
+          }
         }
         &:not(:last-of-type) {
           margin-bottom: 120.3372rem;
+          @include for-phone {
+            margin-top: 330rem;
+          }
         }
         b,
         strong {
@@ -27,6 +37,11 @@
       background: #ec2028;
       bottom: 0;
       right: -221.8717rem;
+      @include for-phone {
+        right: 440rem;
+        width: 440rem;
+        height: 440rem;
+      }
     }
     .form-wrapper {
       background: #08338e;
@@ -36,6 +51,18 @@
       padding-left: 233.1533rem;
       // padding-right: 291.4416rem;
       padding-bottom: 112.8161rem;
+      @include for-phone {
+        padding-right: 233.1533rem;
+        padding-bottom: 830rem;
+        width: 100%;
+        .wpcf7-list-item {
+          margin-left: 0;
+          // margin-right: 1em;
+          .wpcf7-list-item-label {
+            font-size: 140rem;
+          }
+        }
+      }
       .row {
         display: flex;
         flex-wrap: wrap;
@@ -44,6 +71,9 @@
         .col-6 {
           flex: 0 0 auto;
           width: 50%;
+          &.d-flex {
+            display: block;
+          }
         }
         .col-12,
         h2 {
@@ -55,10 +85,21 @@
           padding: 5.6408rem;
           flex: 0 0 auto;
           width: 33.3333333333%;
+          @include for-phone {
+            width: 100%;
+          }
         }
         .col-6,
         .col-12 {
           padding-right: 180.5058rem;
+          @include for-phone {
+            width: 100%;
+            max-width: 100%;
+            padding-right: 0;
+            br {
+              display: none;
+            }
+          }
         }
         input[type="text"],
         input[type="number"],
@@ -75,6 +116,10 @@
           &:placeholder {
             color: rgba(0, 0, 0, 0.7);
           }
+          @include for-phone {
+            padding: 160rem 200rem;
+            font-size: 140rem;
+          }
         }
         input[type="date"],
         input[type="time"] {
@@ -82,7 +127,13 @@
           font-size: 37.6054rem;
           border: none;
           background: #fff;
+          @include for-phone {
+            width: 100%;
+            padding: 160rem 200rem;
+            font-size: 140rem;
+          }
         }
+
         input[type="radio"] {
           -webkit-appearance: auto;
           appearance: auto;
@@ -95,6 +146,12 @@
           margin-bottom: 92.1331rem;
           font-weight: $bold;
           max-width: calc(100% - 180.5058rem);
+          @include for-phone {
+            font-size: 240rem;
+            padding-bottom: 300rem;
+            margin-bottom: 200rem;
+            max-width: 100%;
+          }
         }
         label {
           font-size: 37.6054rem;
@@ -102,6 +159,11 @@
           margin-bottom: 39.4856rem;
           margin-top: 56.408rem;
           display: block;
+          @include for-phone {
+            font-size: 160rem;
+            margin-top: 170rem;
+            margin-bottom: 170rem;
+          }
         }
       }
     }
@@ -114,7 +176,9 @@
     padding: 154.182rem 755.8678rem 150.4215rem 231.273rem;
     position: relative;
     overflow-x: hidden;
-
+    @include for-phone {
+      padding: 450rem 200rem 150rem 200rem;
+    }
     &::after {
       content: "";
       position: absolute;
@@ -123,6 +187,11 @@
       background: #08338e;
       top: 0;
       right: -44rem;
+      @include for-phone {
+        right: 0;
+        width: 440rem;
+        height: 440rem;
+      }
     }
     .heading {
       color: #0f2765;
@@ -136,13 +205,25 @@
         align-items: center;
         align-content: stretch;
         justify-content: center;
+        @include for-phone {
+          flex-direction: column;
+        }
         .col {
           width: 1224.0546rem;
           flex: 0 0 auto;
           // odd selector
           margin-bottom: 60.1686rem;
+          @include for-phone {
+            width: 100%;
+            br {
+              display: none;
+            }
+          }
           &:nth-of-type(odd) {
             margin-right: 120.8649rem;
+            @include for-phone {
+              margin-right: 0;
+            }
           }
           label {
             font-weight: $bold;
@@ -151,6 +232,11 @@
             margin-bottom: 37.6054rem;
             color: #0f2765;
             display: block;
+            @include for-phone {
+              font-size: 160rem;
+              margin-bottom: 170rem;
+              margin-top: 170rem;
+            }
           }
           input {
             width: 100%;
@@ -158,6 +244,12 @@
             border: 1px solid #08338e;
             padding: 37.6054rem 56.408rem;
             font-size: 37.6054rem;
+            font-family: $roboto;
+            @include for-phone {
+              padding: 160rem 200rem;
+              font-size: 140rem;
+              height: auto;
+            }
           }
           button {
             width: 100%;
@@ -175,8 +267,13 @@
             position: relative;
             bottom: -109rem;
             cursor: pointer;
+
             &:hover {
               background: $lblue;
+            }
+            @include for-phone {
+              height: auto;
+              padding: 160rem 200rem;
             }
           }
         }

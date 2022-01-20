@@ -15,11 +15,16 @@
         <div class="swiper">
             <div class="swiper-wrapper">
                 <?php
+                if (wp_is_mobile()) {
+                    $postPerPage = '3';
+                } else {
+                    $postPerPage = '12';
+                }
                 // WP_Query arguments
                 $args = array(
                     'post_type'              => array('gallery'),
                     'post_status'            => array('publish'),
-                    'posts_per_page'         => '12',
+                    'posts_per_page'         => $postPerPage,
                     'paged'                  => get_query_var('paged'),
                 );
 
@@ -41,7 +46,7 @@
                                 </div>
                                 <div class="content">
                                     <h3 class="title"><?= the_title(); ?></h3>
-                                    <a href="" class="btn btn-blank">View More <i class="fal fa-long-arrow-right"></i></a>
+                                    <a href="<?= get_the_permalink(); ?>" class="btn btn-blank">View More <i class="fal fa-long-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>

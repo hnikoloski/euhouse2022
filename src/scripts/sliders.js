@@ -19,12 +19,20 @@ jQuery(document).ready(function ($) {
   });
   let singlePhotoSlider = new Swiper(".single-gallery-slider ", {
     modules: [Navigation],
-    slidesPerView: '1.9',
+    slidesPerView: '1.1',
     loop: true,
-    spaceBetween: 30,
+    spaceBetween: 10,
     navigation: {
       nextEl: ".top-bar .swiper-button-next",
       prevEl: ".top-bar .swiper-button-prev",
+    },
+    breakpoints: {
+      // when window width is >= 768
+      768: {
+        slidesPerView: '1.9',
+        spaceBetween: 30,
+
+      },
     },
   });
   let singleGallerySliderInner = new Swiper(".single-gallery .single-gallery-slider ", {
@@ -84,5 +92,12 @@ jQuery(document).ready(function ($) {
         prevEl: ".gallery-slider .swiper-button-prev",
       },
     });
+  }
+
+
+  // Destroy swiper on mobile
+  if ($(window).width() < 501) {
+    gallerySlider.destroy();
+
   }
 });

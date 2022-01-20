@@ -7,11 +7,18 @@
     padding-right: 212.4703rem;
     width: 100%;
     flex: 0 0 100%;
+    @include for-phone {
+      padding-top: 0;
+      display: block;
+    }
     &::before {
       display: none;
     }
     .text {
       max-width: 1237.2165rem;
+      @include for-phone {
+        max-width: 100%;
+      }
       h3 {
         font-weight: $regular;
         text-transform: none;
@@ -20,6 +27,10 @@
       }
       p {
         font-size: 37.6054rem;
+        @include for-phone {
+          font-size: 160rem;
+          margin-bottom: 300rem;
+        }
       }
     }
     .img-wrapper {
@@ -30,11 +41,23 @@
       position: absolute;
       right: -150rem;
       bottom: -605rem;
+      @include for-phone {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        height: 2330rem;
+        margin-bottom: -50%;
+        z-index: 9;
+      }
     }
   }
   .container {
     max-width: 3172.0126rem;
     flex: 0 0 auto;
+    @include for-phone {
+      max-width: 100%;
+    }
   }
   .content {
     padding-left: 229.3927rem;
@@ -43,14 +66,37 @@
     padding-bottom: 244.4349rem;
     color: #fff;
     background: #08338e;
-
+    @include for-phone {
+      padding-top: 1655rem;
+      padding-bottom: 1330rem;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        right: 20rem;
+        bottom: 20rem;
+        width: 1200rem;
+        height: 1200rem;
+        background: url("../../assets/icons/contact-deco-croped.svg");
+        @include bg-props(cover, center, no-repeat);
+      }
+    }
     p {
       font-size: 37.6054rem;
+      @include for-phone {
+        font-size: 160rem;
+      }
       &:not(:last-of-type) {
         margin-bottom: 84.6121rem;
+        @include for-phone {
+          margin-bottom: 340rem;
+        }
       }
       &:first-of-type {
         max-width: 1203.3717rem;
+        @include for-phone {
+          max-width: 100%;
+        }
       }
     }
   }
@@ -82,6 +128,10 @@
     background: linear-gradient(180deg, #0f2765 80%, white 80%);
     margin-bottom: 94.0134rem;
     position: relative;
+    @include for-phone {
+      background: #0f2765;
+      padding-bottom: 530rem;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -90,6 +140,9 @@
       background: #ec2028;
       width: 114.6964rem;
       height: 114.6964rem;
+      @include for-phone {
+        display: none;
+      }
     }
     &::after {
       content: "";
@@ -99,6 +152,9 @@
       background: #08338e;
       width: 114.6964rem;
       height: 114.6964rem;
+      @include for-phone {
+        display: none;
+      }
     }
     .top-bar {
       padding-right: 236.9138rem;
@@ -110,12 +166,21 @@
           font-size: inherit;
           background: $yellow;
           padding: 0 18.8027rem;
+          @include for-phone {
+            display: block;
+            width: fit-content;
+            width: -moz-fit-content;
+          }
         }
       }
       h3 {
         font-weight: $regular;
         margin-top: 9.4013rem;
         max-width: 1237.2165rem;
+        @include for-phone {
+          max-width: 100%;
+          margin-bottom: 280rem;
+        }
       }
       .swiper-button {
         padding: 0;
@@ -126,6 +191,9 @@
         height: 116.5766rem;
         line-height: 116.5766rem;
         text-align: center;
+        @include for-phone {
+          display: none;
+        }
         &:first-of-type {
           margin-right: 33.8448rem;
         }
@@ -137,6 +205,13 @@
     .swiper {
       .swiper-slide {
         height: auto;
+        @include for-phone {
+          min-height: 2330rem;
+          img {
+            object-fit: cover;
+            object-position: center;
+          }
+        }
       }
     }
   }
@@ -144,8 +219,15 @@
     header {
       flex: 1 0 100%;
       max-width: 100%;
+      @include for-phone {
+        padding-top: 900rem;
+        margin-top: 60rem;
+      }
       .text {
         max-width: 2651.1783rem;
+        @include for-phone {
+          max-width: 100%;
+        }
         h2 {
           margin-bottom: 90.2529rem;
         }
@@ -157,16 +239,27 @@
     .container {
       max-width: 3172.0126rem;
       flex: 1 0 auto;
+      @include for-phone {
+        max-width: 100%;
+      }
       .content {
         flex: 1 0 auto;
         width: 100%;
         border-right: 1px solid #08338e;
+        @include for-phone {
+          padding-top: 620rem;
+        }
         h2 {
           font-size: 67.6897rem;
           font-weight: $bold;
           padding-bottom: 92.1331rem;
           border-bottom: 5.6408rem solid #fff;
           margin-bottom: 90.2529rem;
+          @include for-phone {
+            font-size: 240rem;
+            margin-bottom: 250rem;
+            padding-bottom: 250rem;
+          }
         }
         p {
           max-width: 100%;

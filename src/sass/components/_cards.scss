@@ -1,16 +1,26 @@
 .card {
   border-top: 9.4013rem solid $yellow;
+  @include for-phone {
+    border-width: 60rem;
+  }
   .img-wrapper {
     position: relative;
     width: 100%;
     height: 1005.9435rem;
-
+    @include for-phone {
+      height: 2210rem;
+    }
     .date {
       position: absolute;
       top: 0;
       right: 65.8094rem;
       background: $yellow;
       padding: 33.8448rem 52.6475rem;
+      @include for-phone {
+        right: 140rem;
+        padding: 200rem;
+        top: -10rem;
+      }
       p {
         font-weight: $bold;
         color: #fff;
@@ -19,10 +29,16 @@
         letter-spacing: -0.015em;
         &:first-of-type {
           font-size: 67.6897rem;
+          @include for-phone {
+            font-size: 210rem;
+          }
         }
         &:last-of-type {
           font-size: 45.1264rem;
           text-transform: uppercase;
+          @include for-phone {
+            font-size: 120rem;
+          }
         }
       }
     }
@@ -30,6 +46,10 @@
   .content {
     padding: 97.774rem 110.9358rem;
     background: #fff;
+    @include for-phone {
+      padding: 250rem 280rem;
+      min-height: 1530rem;
+    }
     .title {
       font-size: 45.1264rem;
       line-height: 1.3;
@@ -37,13 +57,25 @@
       font-weight: $bold;
       color: #000;
       margin-bottom: 47.0067rem;
+      @include for-phone {
+        font-size: 180rem;
+      }
     }
   }
   &-room {
     border-top: none;
+    @include for-phone {
+      &:not(:last-of-type) {
+        margin-bottom: 500rem;
+      }
+    }
     .img-wrapper {
       height: 658.0939rem;
       margin-bottom: 35.7251rem;
+      @include for-phone {
+        height: 2090rem;
+        margin-bottom: 0;
+      }
     }
     .top {
       display: flex;
@@ -51,10 +83,22 @@
       align-items: center;
       align-content: center;
       margin-bottom: 28.204rem;
+      @include for-phone {
+        background: #fff;
+        padding: 128rem 80rem;
+        margin-bottom: 0;
+        i {
+          width: 360rem;
+          height: 360rem;
+        }
+      }
       .title {
         color: $dblue;
         font-size: 67.6897rem;
         font-weight: $bold;
+        @include for-phone {
+          font-size: 200rem;
+        }
       }
       a {
         display: block;
@@ -67,6 +111,25 @@
       font-size: 37.6054rem;
       margin-bottom: 60.1686rem;
       line-height: 1.2;
+      @include for-phone {
+        font-size: 140rem;
+        margin-bottom: 0;
+        padding-bottom: 260rem;
+        background: #fff;
+        padding-left: 80rem;
+        padding-right: 80rem;
+      }
+    }
+    .btn {
+      @include for-phone {
+        width: 100%;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        i {
+          margin-left: auto;
+        }
+      }
     }
   }
 }

@@ -29,12 +29,12 @@
                         </div>
                         <div class="top">
                             <h3 class="title"><?= get_the_title(); ?></h3>
-                            <a href="<?= the_field('link_to_vr'); ?>" target="_blank">
+                            <a href="<?= the_field('link_to_vr'); ?>" target="_blank" rel="noreferrer nofollow">
                                 <i class="icon icon-360"></i>
                             </a>
                         </div>
                         <p> <?= the_field('short_info'); ?></p>
-                        <a href="<?= the_field('link_to_vr'); ?>" target="_blank" class="btn btn-blue">View More <i class="fal fa-long-arrow-right"></i></a>
+                        <a href="<?= the_field('link_to_vr'); ?>" target="_blank" rel="noreferrer nofollow" class="btn btn-blue">View More <i class="fal fa-long-arrow-right"></i></a>
                     </div>
             <?php
                     $counter++;

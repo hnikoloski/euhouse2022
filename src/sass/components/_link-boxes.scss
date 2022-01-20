@@ -5,6 +5,9 @@
   align-content: flex-start;
   justify-content: flex-start;
   align-items: flex-start;
+  @include for-phone {
+    display: block;
+  }
   .single-box {
     flex: 1 0 33.33%;
     width: 33.33%;
@@ -16,6 +19,12 @@
     background-size: cover !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
+    @include for-phone {
+      flex: 1 0 100%;
+      width: 100%;
+      padding: 310rem 200rem;
+      min-height: auto;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -40,6 +49,11 @@
         position: relative;
         margin-left: auto;
         margin-right: auto;
+        @include for-phone {
+          font-size: 200rem;
+          padding-bottom: 60rem;
+          margin-bottom: 150rem;
+        }
         &::after {
           content: "";
           position: absolute;
@@ -49,6 +63,9 @@
           height: 16.9224rem;
           background: url("../../assets/icons/fancy-border.svg");
           @include bg-props(cover, center, no-repeat);
+          @include for-phone {
+            height: 50rem;
+          }
         }
       }
       p {
@@ -57,6 +74,10 @@
         margin-bottom: 73.3305rem;
         letter-spacing: 0.02em;
         line-height: 1.2;
+        @include for-phone {
+          font-size: 140rem;
+          margin-bottom: 180rem;
+        }
       }
     }
     &.fancy {
@@ -66,6 +87,15 @@
         width: 706.9809rem;
         position: absolute;
         @include abs-center();
+        @include for-phone {
+          @include rm-transform();
+          position: relative;
+          left: 0;
+          top: 0;
+          width: 2250rem;
+          padding: 400rem 350rem 350rem 400rem;
+          margin: 450rem auto;
+        }
         h3 {
           padding-bottom: 0;
           margin-bottom: 30.0843rem;

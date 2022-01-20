@@ -1,5 +1,8 @@
 .site-footer {
   margin-top: 244.4349rem;
+  @include for-phone {
+    margin-top: 650rem;
+  }
   .footer-top {
     padding-top: 259.477rem;
     padding-bottom: 188.0268rem;
@@ -16,6 +19,9 @@
     p {
       font-size: 37.6054rem;
       line-height: 2.5;
+      @include for-phone {
+        font-size: 160rem;
+      }
     }
     .logo-image {
       width: 752.1073rem;
@@ -23,6 +29,11 @@
       margin-bottom: 50.7672rem;
       img {
         @include fullSizeImg(cover);
+      }
+      @include for-phone {
+        width: 2380rem;
+        height: 580rem;
+        margin-bottom: 360rem;
       }
     }
     .app-store-logo {
@@ -33,6 +44,15 @@
       }
       &:first-of-type {
         margin-bottom: 30.0843rem;
+        @include for-phone {
+          margin-bottom: 0;
+          margin-right: 180rem;
+        }
+      }
+      @include for-phone {
+        width: 1256rem;
+        height: 380rem;
+        display: inline-block;
       }
       img {
         @include fullSizeImg(cover);
@@ -43,6 +63,9 @@
       color: #08338e;
       font-size: 33.8448rem;
       margin-bottom: 71.4502rem;
+      @include for-phone {
+        font-size: 160rem;
+      }
       a {
         font-size: inherit;
         font-weight: inherit;
@@ -59,6 +82,9 @@
         font-size: 33.8448rem;
         color: #000;
         line-height: 1.25;
+        @include for-phone {
+          font-size: 160rem;
+        }
       }
       li {
         &:not(:last-of-type) {
@@ -81,16 +107,38 @@
     justify-content: space-between;
     align-items: center;
     align-content: center;
+    @include for-phone {
+      flex-wrap: wrap;
+      padding-top: 360rem;
+      padding-bottom: 360rem;
+      padding-left: 200rem;
+      padding-right: 200rem;
+      p,
+      ul {
+        flex: 0 0 auto;
+        width: 100%;
+        text-align: center;
+      }
+    }
     p {
       font-size: 30.0843rem;
       line-height: 1.53;
       letter-spacing: -0.01em;
+      @include for-phone {
+        font-size: 140rem;
+        order: 2;
+      }
     }
     ul {
       display: flex;
       justify-content: flex-end;
       align-items: center;
       align-content: center;
+      @include for-phone {
+        order: 1;
+        justify-content: center;
+        margin-bottom: 250rem;
+      }
       li {
         &:not(:last-of-type) {
           margin-right: 197.4282rem;
@@ -98,6 +146,9 @@
         a {
           color: #fff;
           font-size: 30.0843rem;
+          @include for-phone {
+            font-size: 140rem;
+          }
           &:hover {
             color: $lblue;
           }

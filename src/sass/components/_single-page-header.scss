@@ -27,7 +27,9 @@
     text-transform: uppercase;
     padding: 5.6408rem 41.3659rem;
     line-height: 1;
-
+    @include for-phone {
+      line-height: 1.2;
+    }
     &.red-bg {
       background: #ec2028;
       color: #fff;

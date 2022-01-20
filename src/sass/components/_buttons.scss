@@ -6,11 +6,21 @@
   display: block;
   font-weight: $bold;
   cursor: pointer;
+  @include for-phone {
+    font-size: 140rem;
+    padding: 100rem 200rem;
+  }
   &-blue {
     background: #08338e;
     color: #fff;
     i {
       margin-left: 22.563219rem;
+      @include for-phone {
+        margin-left: 200rem;
+        &:hover {
+          margin-left: 200rem;
+        }
+      }
     }
     &:hover {
       background: $lblue;
@@ -24,6 +34,12 @@
     }
     i {
       margin-left: 22.563219rem;
+      @include for-phone {
+        margin-left: 200rem;
+        &:hover {
+          margin-left: 200rem;
+        }
+      }
     }
     &:hover {
       background: $lblue;
@@ -48,6 +64,12 @@
     font-weight: $bold;
     i {
       margin-left: 22.563219rem;
+      @include for-phone {
+        margin-left: 200rem;
+        &:hover {
+          margin-left: 200rem;
+        }
+      }
     }
     &:hover {
       i {

@@ -4,6 +4,11 @@
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
+    @include for-phone {
+      min-height: auto;
+      padding-top: 1170rem;
+      padding-bottom: 1960rem;
+    }
     .content {
       color: #fff;
       max-width: 1690rem;
@@ -11,9 +16,15 @@
         background: $blue;
         text-align: center;
         padding: 37.605366rem 56.408048rem;
+        @include for-phone {
+          padding: 110rem 180rem;
+        }
         p {
           font-size: 37.605366rem;
           font-weight: $medium;
+          @include for-phone {
+            font-size: 140rem;
+          }
           i {
             margin-right: 24.443488rem;
           }
@@ -23,9 +34,15 @@
         background: $yellow;
         padding: 22.563219rem 90.252877rem;
         margin-bottom: 24rem;
+        @include for-phone {
+          padding: 100rem 240rem;
+        }
         p {
           font-size: 56.408048rem;
           line-height: 1.4;
+          @include for-phone {
+            font-size: 140rem;
+          }
         }
       }
       h2 {
@@ -37,9 +54,15 @@
         padding: 26.323756rem 43.24617rem 20.682951rem 90.252877rem;
         font-size: 127.858243rem;
         line-height: 1.25;
+        @include for-phone {
+          font-size: 400rem;
+        }
       }
       .btn {
         margin-top: 94.013414rem;
+        @include for-phone {
+          margin-top: 290rem;
+        }
       }
     }
   }

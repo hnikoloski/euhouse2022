@@ -1,6 +1,11 @@
 #gallery-slider {
   .swiper-slide {
     height: auto;
+    @include for-phone {
+      &:not(:last-of-type) {
+        margin-bottom: 265rem;
+      }
+    }
     .card {
       height: 100%;
       display: flex;

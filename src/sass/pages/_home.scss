@@ -1,5 +1,20 @@
 #gallery-slider {
   position: relative;
+  @include for-phone {
+    padding-top: 990rem;
+    background: #0f2765;
+    background: linear-gradient(180deg, white 33.1%, #0f2765 33.1%);
+    .page-padding-x {
+      padding-left: 150.4215rem;
+      padding-right: 150.4215rem;
+    }
+    .swiper {
+      background: #08338e;
+      background: linear-gradient(180deg, white 18.9%, #08338e 18.9%);
+      padding-left: 110rem;
+      padding-right: 110rem;
+    }
+  }
   &::before {
     content: "";
     position: absolute;
@@ -9,16 +24,37 @@
     height: 280.159973rem;
     background: url("../../assets/icons/chevron-down-decoration.svg");
     @include bg-props(cover, center, no-repeat);
+    @include for-phone {
+      width: 610rem;
+      height: 610rem;
+      top: 210rem;
+      background: url("../../assets/icons/wave-decoration.svg");
+      @include bg-props(contain, center, no-repeat);
+      left: -80rem;
+    }
   }
   header {
     margin-bottom: 94.013414rem;
     margin-top: 157.9425rem;
     margin-bottom: 94.0134rem;
-    h2 {
+    @include for-phone {
+      margin-top: 0;
+      .slider-buttons {
+        display: none;
+      }
+    }
+    h3 {
       margin-bottom: 75.210731rem;
+      @include for-phone {
+        margin-bottom: 284rem;
+      }
     }
     p {
       font-size: 37.605366rem;
+      @include for-phone {
+        font-size: 160rem;
+        margin-bottom: 440rem;
+      }
     }
     .btn {
       &:first-of-type {
@@ -32,6 +68,9 @@
     padding-left: 150.4215rem;
     padding-right: 150.4215rem;
     background: $dblue;
+    @include for-phone {
+      margin-top: 0;
+    }
     .wrapper {
       margin-top: 120.3372rem;
       background: #08338e;
@@ -42,6 +81,11 @@
       align-items: flex-end;
       align-content: flex-end;
       position: relative;
+      @include for-phone {
+        margin-top: 0;
+        padding-bottom: 250rem;
+        margin-bottom: 0;
+      }
       &::after {
         content: "";
         position: absolute;
@@ -50,7 +94,15 @@
         background: #fff;
         height: 5.6408rem;
         width: 90%;
+        @include for-phone {
+          height: 20rem;
+        }
       }
+    }
+  }
+  @include for-phone {
+    .swiper-wrapper {
+      display: block;
     }
   }
 }
@@ -64,6 +116,9 @@
     rgba(255, 255, 255, 1) 62%
   );
   position: relative;
+  @include for-phone {
+    background: linear-gradient(180deg, #0f2765 32.5%, white 32.5%);
+  }
   &::after {
     position: absolute;
     content: "";
@@ -73,6 +128,9 @@
     @include bg-props(contain, center, no-repeat);
     width: 225.6322rem;
     height: 431.2644rem;
+    @include for-phone {
+      display: none;
+    }
   }
   .section-wrapper {
     background: rgb(8, 51, 142);
@@ -85,13 +143,26 @@
       padding-top: 105.295rem;
       padding-bottom: 118.4569rem;
       text-align: center;
+      @include for-phone {
+        padding-top: 600rem;
+        padding-left: 110rem;
+        padding-right: 110rem;
+      }
       .heading {
         margin-bottom: 63.9291rem;
         color: #fff;
+        @include for-phone {
+          margin-bottom: 400rem;
+        }
       }
       .subtitle {
         color: #fff;
         font-size: 37.6054rem;
+        @include for-phone {
+          font-size: 180rem;
+          font-weight: $regular;
+          margin-bottom: 360rem;
+        }
       }
     }
     .cards-wrapper {
@@ -100,24 +171,56 @@
       align-items: flex-start;
       flex-wrap: wrap;
       padding: 0 205rem;
+      @include for-phone {
+        background: linear-gradient(180deg, #08338e 16.5%, white 16.5%);
+      }
       .card-room {
         width: auto;
         flex: 0 0 auto;
         max-width: 30%;
+        @include for-phone {
+          max-width: 100%;
+          width: 100%;
+        }
       }
     }
   }
 }
 #share-ideas {
   margin-top: 268.8784rem;
+  @include for-phone {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .container {
     background: $yellow;
     background-image: url("../../assets/img/ideas-bg.svg");
     @include bg-props(100%, 0 100%, no-repeat);
     min-height: 1156.365rem;
+    @include for-phone {
+      min-height: auto;
+      padding-top: 1270rem;
+      padding-bottom: 3210rem;
+      @include bg-props(250%, 100% 100%, no-repeat);
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 300rem;
+        background: url("../../assets/icons/white-wave-decoration.svg");
+        @include bg-props(cover, center, no-repeat);
+        width: 1000rem;
+        height: 1000rem;
+      }
+    }
     .col {
       padding: 223.7519rem 0 174.8649rem 293.3219rem;
       max-width: 60%;
+      @include for-phone {
+        max-width: 100%;
+        padding: 223.7519rem 174.8649rem;
+      }
       h3 {
         font-size: 127.8582rem;
         color: #000;
@@ -128,14 +231,27 @@
         line-height: 1;
         width: -moz-fit-content;
         margin-bottom: 120.3372rem;
+        @include for-phone {
+          font-size: 360rem;
+          margin-bottom: 270rem;
+        }
       }
       p {
         font-size: 37.6054rem;
+        @include for-phone {
+          font-size: 160rem;
+        }
         &:not(:last-of-type) {
           margin-bottom: 65.8094rem;
+          @include for-phone {
+            margin-bottom: 160rem;
+          }
         }
         &:last-of-type {
           margin-bottom: 112.8161rem;
+          @include for-phone {
+            margin-bottom: 250rem;
+          }
         }
       }
     }
