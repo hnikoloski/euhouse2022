@@ -67,6 +67,12 @@
             border-color: #ec2028;
           }
         }
+        textarea {
+          height: 376.053655rem;
+          @include for-phone {
+            height: 1220rem;
+          }
+        }
         .wpcf7-response-output {
           color: #fff;
           text-align: center;

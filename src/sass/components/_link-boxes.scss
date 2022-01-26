@@ -49,6 +49,10 @@
       pointer-events: none;
       opacity: 0.4;
       border-color: transparent transparent #007bff transparent;
+      @include for-phone {
+        border-width: 0 0 2237.808478rem 3580.808478rem;
+        opacity: 0.2;
+      }
     }
     .content {
       position: relative;

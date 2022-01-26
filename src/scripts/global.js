@@ -7,10 +7,11 @@ jQuery(document).ready(function ($) {
     // if($('.try-to-hide').hasClass)
     $(`.try-to-hide.${$(".checkCountry").val()}`).hide();
   }
-  $("#masthead #primary-menu li a").addClass(
-    "fancy-hover fancy-hover-lblue"
-  );
-
+  if ($(window).width() > 500) {
+    $("#masthead #primary-menu li a").addClass(
+      "fancy-hover fancy-hover-lblue"
+    );
+  }
   //Cookie Functions
   function readCookie(name) {
     var nameEQ = name + "=";
@@ -39,5 +40,31 @@ jQuery(document).ready(function ($) {
     setCookie(key, keyValue, "-1");
   }
   // End Cookie Functions
+
+  // Cookie notice
+  if (getCookie("visitorCookie") == "cookieAccepted") {
+    $("#cookie-notice").remove();
+  } else {
+    $("body").append(
+      '<div id="cookie-notice" class="animated fadeInUp"> <p>Our Website uses cookies to improve your experience. Read more at our <a href="/privacy-policy-mobile-app">Privacy Policy</a>.</p> <div class="buttons-wrapper"> <a href="#!" class="accept">Accept</a> <a href="#!" class="decline">Decline</a></div> </div>'
+    );
+    $("#cookie-notice .accept").on("click", function (e) {
+      e.preventDefault();
+      setCookie("visitorCookie", "cookieAccepted", 3);
+      $("#cookie-notice").hide();
+      setTimeout(function () {
+        $("#cookie-notice").remove();
+      }, 3000);
+    });
+    $("#cookie-notice .decline").on("click", function (e) {
+      e.preventDefault();
+      setCookie("visitorCookie", "cookieDeclined", 3);
+      $("#cookie-notice").hide();
+      setTimeout(function () {
+        $("#cookie-notice").remove();
+      }, 3000);
+    });
+  }
+  // Cookie notice end
   $('.current-year').text(new Date().getFullYear());
 });

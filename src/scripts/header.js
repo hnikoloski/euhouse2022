@@ -20,7 +20,7 @@ jQuery(document).ready(function ($) {
     });
     if ($(window).width() < 500) {
         $('#masthead').append('<div id="mob-menu-trigger"><span></span><span></span><span></span></div>');
-        $('#primary-menu li.menu-item-has-children').append('<span class="sub-menu-trigger"><span></span><span></span></span>');
+        $('#primary-menu li.menu-item-has-children').append('<span class="sub-menu-trigger"><i class="fas fa-chevron-down"></i></span>');
 
         $('#mob-menu-trigger').on('click', function () {
             $(this).toggleClass('active');

@@ -1,6 +1,9 @@
 .mobile-app {
   display: block;
   .single-page-header {
+    @include for-phone {
+      padding-bottom: 1440rem;
+    }
     h2 {
       margin-bottom: 82.7318rem;
     }
@@ -9,6 +12,11 @@
       font-size: 37.6054rem;
       max-width: 2248.8009rem;
       line-height: 1.2;
+      @include for-phone {
+        font-size: 160rem;
+        max-width: 100%;
+        margin-bottom: 350rem;
+      }
       b,
       strong {
         font-weight: $bold;
@@ -28,6 +36,9 @@
       @include bg-props(contain, center, no-repeat);
       width: 399.9742rem;
       height: 589.9742rem;
+      @include for-phone {
+        display: none;
+      }
     }
     header {
       position: absolute;
@@ -37,6 +48,10 @@
       background: #08338e;
       padding: 171.1044rem 466.3065rem 270.7586rem 231.273rem;
       max-width: 3173.8929rem;
+      @include for-phone {
+        max-width: 100%;
+        padding: 4360rem 200rem 350rem 200rem;
+      }
       &::after {
         content: "";
         position: absolute;
@@ -45,6 +60,9 @@
         background: #ec2028;
         width: 221.8717rem;
         height: 221.8717rem;
+        @include for-phone {
+          right: 390rem;
+        }
       }
       .side-wrapper {
         position: absolute;
@@ -53,10 +71,25 @@
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
+        @include for-phone {
+          top: -2090rem;
+          right: 0;
+          width: 100%;
+          flex-wrap: wrap;
+        }
         ul {
           position: relative;
           top: -180rem;
           left: 130rem;
+          @include for-phone {
+            display: flex;
+            top: -300rem;
+            left: 0;
+            flex: 0 0 100%;
+            order: 2;
+            justify-content: space-between;
+            padding: 0 200rem;
+          }
           li {
             &:not(:last-of-type) {
               margin-bottom: 30.0843rem;
@@ -71,12 +104,25 @@
               &:hover {
                 transform: scale(1.1);
               }
+              @include for-phone {
+                width: 1570rem;
+                height: 479rem;
+                &:hover {
+                  transform: scale(1);
+                }
+              }
             }
           }
         }
         .main-img {
           width: 853.6418rem;
           height: 1301.1456rem;
+          @include for-phone {
+            width: 100%;
+            height: 5610rem;
+            flex: 0 0 100%;
+            order: 1;
+          }
         }
       }
       h2 {
@@ -87,6 +133,11 @@
         font-weight: $bold;
         text-transform: capitalize;
         max-width: 1786.2549rem;
+        @include for-phone {
+          max-width: 100%;
+          font-size: 220rem;
+          margin-bottom: 300rem;
+        }
       }
       h4 {
         color: #4e87ff;
@@ -95,6 +146,12 @@
         font-weight: $bold;
         &:not(:first-of-type) {
           margin-top: 116.5766rem;
+          @include for-phone {
+            margin-top: 300rem;
+          }
+        }
+        @include for-phone {
+          font-size: 180rem;
         }
       }
       p {
@@ -102,6 +159,12 @@
         color: #fff;
         &:not(:last-of-type) {
           margin-bottom: 65.8094rem;
+          @include for-phone {
+            margin-bottom: 160rem;
+          }
+        }
+        @include for-phone {
+          font-size: 160rem;
         }
       }
     }
@@ -110,6 +173,9 @@
       position: relative;
       overflow: hidden;
       padding-bottom: 0;
+      @include for-phone {
+        padding-top: 100rem;
+      }
       &::before,
       &::after {
         content: "";
@@ -134,6 +200,9 @@
         &:not(:last-of-type) {
           margin-bottom: 56.408rem;
         }
+        @include for-phone {
+          font-size: 160rem;
+        }
         strong,
         b {
           font-weight: $bold;
@@ -144,6 +213,10 @@
         font-size: 67.6897rem;
         font-weight: $bold;
         margin-bottom: 105.295rem;
+        @include for-phone {
+          font-size: 220rem;
+          margin-bottom: 300rem;
+        }
       }
       h4 {
         color: #4e87ff;
@@ -151,6 +224,9 @@
         text-transform: uppercase;
         margin-bottom: 31.9646rem;
         font-weight: $bold;
+        @include for-phone {
+          font-size: 180rem;
+        }
       }
       ul {
         margin: 65.8094rem 0;
@@ -160,6 +236,12 @@
           font-size: 37.6054rem;
           &:not(:last-of-type) {
             margin-bottom: 37.6054rem;
+            @include for-phone {
+              margin-bottom: 180rem;
+            }
+          }
+          @include for-phone {
+            font-size: 160rem;
           }
           &::before {
             content: "";
@@ -179,6 +261,9 @@
         margin-bottom: 176.7452rem;
         border-top: 3.7605rem solid #fff;
         position: relative;
+        @include for-phone {
+          display: block;
+        }
         .heading {
           text-transform: capitalize;
           margin-bottom: 56.408rem;
@@ -197,13 +282,23 @@
           flex: 1 0 auto;
           &:first-of-type {
             max-width: 996.5422rem;
+            @include for-phone {
+              max-width: 100%;
+            }
             .heading {
               max-width: 737.0652rem;
+              @include for-phone {
+                max-width: 100%;
+              }
             }
           }
           &:last-of-type {
             margin-left: 238.7941rem;
             max-width: 1919.7539rem;
+            @include for-phone {
+              max-width: 100%;
+              margin-left: 0;
+            }
           }
           ul {
             li {
@@ -227,6 +322,10 @@
         align-items: stretch;
         align-content: stretch;
         position: relative;
+        @include for-phone {
+          max-width: 100%;
+          display: block;
+        }
         &::before {
           content: "";
           position: absolute;
@@ -247,12 +346,23 @@
           margin-bottom: 107.1753rem;
           color: #08163a;
           font-weight: $bold;
+          @include for-phone {
+            font-size: 160rem;
+            margin-bottom: 400rem;
+          }
         }
         p {
           flex: 0 0 761.5087rem;
           width: 761.5087rem;
           padding-top: 26.3238rem;
           border-top: 3.7605rem solid #fff;
+          @include for-phone {
+            max-width: 100%;
+            width: 100%;
+            flex: 0 0 100%;
+            padding-top: 190rem;
+            margin-bottom: 300rem;
+          }
         }
       }
       .boxed-listing {
@@ -279,12 +389,16 @@
           padding-bottom: 101.5345rem;
           margin-bottom: 122.2174rem;
           border-bottom: 3.7605rem solid #fff;
+
           .heading {
             margin-bottom: 22.5632rem;
             text-transform: capitalize;
           }
           p {
             font-size: 37.6054rem;
+            @include for-phone {
+              font-size: 160rem;
+            }
             a {
               color: #2c6efa;
               &:hover {

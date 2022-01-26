@@ -270,6 +270,37 @@
         .btn {
           font-weight: $bold;
           text-transform: uppercase;
+          &.icon-file {
+            padding-left: 110.851536rem;
+            position: relative;
+            @include for-phone {
+              width: 100%;
+              text-align: center;
+              padding-left: 370rem;
+            }
+            &::before {
+              content: "\f15c";
+              position: absolute;
+              font-family: "Font Awesome 5 Pro";
+              font-weight: 900;
+              display: inline-block;
+              font-style: normal;
+              font-variant: normal;
+              text-rendering: auto;
+              line-height: 1;
+              @include ver-center();
+              left: 56.408048rem;
+              font-size: 45.126439rem;
+              width: 45.126439rem;
+              height: 45.126439rem;
+              @include for-phone {
+                width: 200rem;
+                height: 200rem;
+                font-size: 200rem;
+                left: 520rem;
+              }
+            }
+          }
           a,
           strong {
             font-weight: inherit;

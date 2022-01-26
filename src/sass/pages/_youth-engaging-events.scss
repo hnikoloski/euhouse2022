@@ -36,11 +36,28 @@
       height: 221.8717rem;
       background: #ec2028;
       bottom: 0;
-      right: -221.8717rem;
+      right: -180.8717rem;
       @include for-phone {
         right: 440rem;
         width: 440rem;
         height: 440rem;
+      }
+    }
+    .side-decoration {
+      position: absolute;
+      right: -407rem;
+      top: 0;
+      height: 100%;
+      width: 449.384118rem;
+      background: #0f2765;
+      background: linear-gradient(180deg, white 2.6%, #0f2765 2.6%);
+      &::before {
+        background: url("../../assets/icons/contact-deco-croped.svg");
+        @include bg-props(contain, center, no-repeat);
+        top: 0;
+        height: 464rem;
+        left: -1rem;
+        width: 450rem;
       }
     }
     .form-wrapper {
@@ -167,10 +184,6 @@
         }
       }
     }
-
-    .side-decoration-youth {
-      background: green;
-    }
   }
   .contact-form {
     padding: 154.182rem 755.8678rem 150.4215rem 231.273rem;
@@ -186,7 +199,7 @@
       height: 221.8717rem;
       background: #08338e;
       top: 0;
-      right: -44rem;
+      right: -2rem;
       @include for-phone {
         right: 0;
         width: 440rem;

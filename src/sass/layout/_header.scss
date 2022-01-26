@@ -10,11 +10,12 @@
   top: 0;
   left: 0;
   width: 100%;
-  border-bottom: 1px solid #0c51a0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   background: #fff;
   z-index: 9999;
   @include for-phone {
     padding: 150rem 220rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     #mob-menu-trigger {
       width: 210rem;
       height: 124rem;
@@ -61,15 +62,6 @@
     }
   }
   &.sticky {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(7.521073rem);
-    -webkit-backdrop-filter: blur(7.521073rem);
-    border-bottom-width: 0.9rem;
-    #primary-menu li .sub-menu {
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(7.521073rem);
-      -webkit-backdrop-filter: blur(7.521073rem);
-    }
     @include for-phone {
       background: #fff;
       backdrop-filter: blur(0);
@@ -92,7 +84,7 @@
     justify-content: space-between;
     align-items: center;
     @include for-phone {
-      padding: 250rem 150rem;
+      padding: 0;
       position: fixed;
       display: block;
       z-index: 999;
@@ -120,16 +112,23 @@
         transition: transform 450ms ease-in-out;
         -moz-transition: transform 450ms ease-in-out;
         -webkit-transition: transform 450ms ease-in-out;
+        max-height: 80vh;
+        overflow-y: auto;
       }
     }
     li {
       position: relative;
       line-height: 176.485634rem;
+      @include for-phone {
+        line-height: 1;
+        padding: 240rem 0;
+      }
       &:not(:last-of-type) {
         margin-right: 174.86495rem;
         @include for-phone {
           margin-right: 0;
-          margin-bottom: 160rem;
+          margin-bottom: 0;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
       }
       a {
@@ -139,6 +138,8 @@
         color: $dblue;
         @include for-phone {
           font-size: 160rem;
+          padding: 0 200rem;
+          font-size: 140rem;
         }
       }
       &.menu-item-has-children {
@@ -156,25 +157,25 @@
             width: 140rem;
             height: 140rem;
             position: absolute;
-            top: 0;
-            right: 0;
-            span {
-              width: 100%;
-              height: 15rem;
-              background: $dblue;
-              position: absolute;
-              @include abs-center();
-              &:last-of-type {
-                transform: translate(-50%, -50%) rotate(90deg);
-                -moz-transform: translate(-50%, -50%) rotate(90deg);
-                -webkit-transform: translate(-50%, -50%) rotate(90deg);
-              }
+            transform: translate(0%, -50%);
+            -moz-transform: translate(0%, -50%);
+            -webkit-transform: translate(0%, -50%);
+            top: 50%;
+            right: 200rem;
+            line-height: 140rem;
+            text-align: center;
+            transition: 0s;
+            i {
+              font-size: 120rem;
             }
+
             &.active {
-              span {
-                &:last-of-type {
-                  width: 0;
-                }
+              top: 270rem;
+              transition: 0s;
+              i {
+                transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                -webkit-transform: rotate(180deg);
               }
             }
           }
@@ -190,7 +191,7 @@
         -moz-transition: transform 0.25s ease-in;
         -webkit-transition: transform 0.25s ease-in;
         z-index: 99;
-        border: 1px solid #08338e;
+        // border: 1px solid #08338e;
         box-shadow: 0 5.6408rem 11.2816rem rgba(8, 51, 142, 0.16);
         background: #fff;
         @include for-phone {
@@ -199,13 +200,18 @@
           -moz-transform: scaleY(1);
           -webkit-transform: scaleY(1);
           display: none;
+          padding: 200rem 0 0 0;
+          box-shadow: none;
         }
         li {
           line-height: 1.1;
           padding: 41.3659rem 47.0067rem;
           width: 100%;
+          @include for-phone {
+            padding: 160rem 200rem;
+          }
           &:not(:last-of-type) {
-            border-bottom: 1px solid #08338e;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
             @include for-phone {
               margin-bottom: 0;
             }
@@ -213,6 +219,10 @@
           a {
             font-size: 30.0843rem;
             @include for-phone {
+              font-size: 140rem;
+              padding: 0;
+              font-weight: $regular;
+              text-transform: capitalize;
               font-size: 140rem;
             }
           }
@@ -293,5 +303,5 @@
   top: 0;
   background: #fff;
   transition: 0s;
-  z-index: 9999;
+  z-index: 99999;
 }

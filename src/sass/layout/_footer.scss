@@ -157,3 +157,20 @@
     }
   }
 }
+
+.page-template-contact-template,
+.page-template-better-eu-template,
+.page-template-simple-inner-page,
+.page-template-mobile-app-template,
+.page-template-culture-matters-template,
+.post-type-archive-newsletter,
+.gallery-template-default {
+  .site-footer {
+    margin-top: 0;
+    .footer-top {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
