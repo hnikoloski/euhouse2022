@@ -131,6 +131,30 @@
           border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
       }
+      &.wpml-ls-item {
+        @include for-phone {
+          display: none;
+        }
+        a {
+          .wpml-ls-native {
+            display: none;
+            @include for-phone {
+              display: inline-block;
+            }
+          }
+        }
+        .sub-menu {
+          width: 200rem;
+          @include for-phone {
+            width: auto;
+          }
+          a {
+            .wpml-ls-native {
+              display: inline-block;
+            }
+          }
+        }
+      }
       a {
         font-size: 30.084292rem;
         font-weight: $bold;
@@ -228,6 +252,12 @@
           }
         }
       }
+    }
+  }
+  .lang-switcher-mob {
+    display: none;
+    @include for-phone {
+      display: flex;
     }
   }
 }

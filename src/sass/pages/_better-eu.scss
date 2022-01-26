@@ -7,7 +7,11 @@
   .container {
     padding-top: 189.9071rem;
     padding-bottom: 317.7653rem;
-
+    background-image: url("../../assets/icons/ideas-bg.svg");
+    @include bg-props(95%, center, no-repeat);
+    @include for-phone {
+      background-image: none;
+    }
     .content {
       flex: 0 0 100%;
       width: 100%;

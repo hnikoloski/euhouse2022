@@ -46,6 +46,9 @@
                 )
             );
             ?>
+            <div class="lang-switcher-mob">
+                <?= do_shortcode('[wpml_language_switcher type="footer" flags=1 native=1 translated=1][/wpml_language_switcher]'); ?>
+            </div>
         </header><!-- #masthead -->
         <aside id="social-links" class="animated fadeInRight">
             <ul>
