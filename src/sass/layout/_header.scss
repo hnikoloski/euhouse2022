@@ -12,7 +12,7 @@
   width: 100%;
   border-bottom: 1px solid #0c51a0;
   background: #fff;
-  z-index: 99;
+  z-index: 9999;
   @include for-phone {
     padding: 150rem 220rem;
     #mob-menu-trigger {

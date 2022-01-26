@@ -37,6 +37,19 @@
       mix-blend-mode: multiply;
       z-index: 1;
     }
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0 877.808478rem 1180.808478rem;
+      pointer-events: none;
+      opacity: 0.4;
+      border-color: transparent transparent #007bff transparent;
+    }
     .content {
       position: relative;
       z-index: 9;
@@ -82,6 +95,9 @@
     }
     &.fancy {
       padding: 0;
+      &::after {
+        display: none;
+      }
       .content {
         padding: 74.978rem 114.6964rem 120.3372rem 114.6964rem;
         width: 706.9809rem;

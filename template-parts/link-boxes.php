@@ -3,21 +3,21 @@
         <div class="content">
             <h3 class="w-fit-content">Events</h3>
             <p><?= the_field('events_description'); ?> </p>
-            <a href="/events" class="btn btn-white mx-auto">View More <i class="fal fa-long-arrow-right"></i></a>
+            <a href="/events" class="btn btn-white mx-auto yellow-deco">View More <i class="fal fa-long-arrow-right"></i></a>
         </div>
     </div>
     <div class="single-box" style="background: url('<?= the_field('news_background'); ?>');">
         <div class="content">
             <h3 class="w-fit-content">News</h3>
             <p><?= the_field('news_description'); ?> </p>
-            <a href="/blog" class="btn btn-white mx-auto">View More <i class="fal fa-long-arrow-right"></i></a>
+            <a href="/blog" class="btn btn-white mx-auto yellow-deco">View More <i class="fal fa-long-arrow-right"></i></a>
         </div>
     </div>
     <div class="single-box" style="background: url('<?= the_field('sponsorship_background'); ?>');">
         <div class="content">
             <h3 class="w-fit-content">Sponsorship</h3>
             <p><?= the_field('sponsorship_description'); ?> </p>
-            <a href="/events" class="btn btn-white mx-auto">View More <i class="fal fa-long-arrow-right"></i></a>
+            <a href="/events" class="btn btn-white mx-auto yellow-deco">View More <i class="fal fa-long-arrow-right"></i></a>
         </div>
     </div>
     <div class="single-box fancy blue" style="background: url('<?= the_field('culture_background'); ?>');">

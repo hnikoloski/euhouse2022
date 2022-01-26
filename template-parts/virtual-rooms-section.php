@@ -34,7 +34,7 @@
                             </a>
                         </div>
                         <p> <?= the_field('short_info'); ?></p>
-                        <a href="<?= the_field('link_to_vr'); ?>" target="_blank" rel="noreferrer nofollow" class="btn btn-blue">View More <i class="fal fa-long-arrow-right"></i></a>
+                        <a href="<?= the_field('link_to_vr'); ?>" target="_blank" rel="noreferrer nofollow" class="btn btn-blue blue-deco">View More <i class="fal fa-long-arrow-right"></i></a>
                     </div>
             <?php
                     $counter++;

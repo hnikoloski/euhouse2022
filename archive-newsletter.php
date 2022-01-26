@@ -38,7 +38,6 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             while ($query->have_posts()) {
                 $query->the_post();
                 // do something
-
         ?>
                 <div class="single-newsletter">
                     <div class="img-wrapper">
@@ -49,7 +48,6 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                             <p><?= get_the_date('j M'); ?></p>
                         </div>
                         <h2><?= the_title(); ?></h2>
-                        <?php the_content(); ?>
                         <a href="<?php the_permalink(); ?>" class="btn btn-blank">View More <i class="fal fa-long-arrow-right"></i></a>
                     </div>
                 </div>

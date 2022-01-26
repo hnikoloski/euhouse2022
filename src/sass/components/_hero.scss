@@ -12,6 +12,9 @@
     .content {
       color: #fff;
       max-width: 1690rem;
+      @include for-phone {
+        max-width: 100%;
+      }
       .date {
         background: $blue;
         text-align: center;

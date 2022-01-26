@@ -45,7 +45,13 @@
                                     <img src="<?= get_the_post_thumbnail_url(); ?>" alt="<?= the_title(); ?>" class="full-size-img full-size-img-cover">
                                 </div>
                                 <div class="content">
-                                    <h3 class="title"><?= the_title(); ?></h3>
+                                    <h3 class="title"><?php
+                                                        $thetitle = get_the_title();
+                                                        $getlength = strlen($thetitle);
+                                                        $thelength = 55;
+                                                        echo substr($thetitle, 0, $thelength);
+                                                        if ($getlength > $thelength) echo "...";
+                                                        ?></h3>
                                     <a href="<?= get_the_permalink(); ?>" class="btn btn-blank">View More <i class="fal fa-long-arrow-right"></i></a>
                                 </div>
                             </div>
@@ -60,7 +66,7 @@
     </div>
     <footer>
         <div class="wrapper">
-            <a href="<?= get_post_type_archive_link('gallery'); ?>" class="btn btn-white mx-auto">View More <i class="fal fa-long-arrow-right"></i></a>
+            <a href="<?= get_post_type_archive_link('gallery'); ?>" class="btn btn-white mx-auto yellow-deco">View More <i class="fal fa-long-arrow-right"></i></a>
         </div>
     </footer>
 </section>

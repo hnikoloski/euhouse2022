@@ -1,5 +1,12 @@
 #gallery-slider {
   position: relative;
+  .swiper-slide {
+    .content {
+      h3 {
+        min-height: 177rem;
+      }
+    }
+  }
   @include for-phone {
     padding-top: 990rem;
     background: #0f2765;
@@ -64,7 +71,7 @@
   }
   footer {
     height: 889.3669rem;
-    margin-top: -531.2644rem;
+    margin-top: -592.2644rem;
     padding-left: 150.4215rem;
     padding-right: 150.4215rem;
     background: $dblue;
@@ -98,6 +105,19 @@
           height: 20rem;
         }
       }
+      &::before {
+        content: "";
+        position: absolute;
+        right: -151rem;
+        top: -675rem;
+        width: 365.632193rem;
+        height: 676.89658rem;
+        background: url("../../assets/icons/decoration.svg");
+        @include bg-props(cover, center, no-repeat);
+        @include for-phone {
+          display: none;
+        }
+      }
     }
   }
   @include for-phone {
@@ -112,8 +132,8 @@
   background: rgb(15, 39, 101);
   background: linear-gradient(
     180deg,
-    rgba(15, 39, 101) 62%,
-    rgba(255, 255, 255, 1) 62%
+    rgba(15, 39, 101) 55.4%,
+    rgba(255, 255, 255, 1) 55.4%
   );
   position: relative;
   @include for-phone {
@@ -123,10 +143,10 @@
     position: absolute;
     content: "";
     right: 0;
-    bottom: 397rem;
+    bottom: 510rem;
     background: url("../../assets/icons/rooms-deco.svg");
     @include bg-props(contain, center, no-repeat);
-    width: 225.6322rem;
+    width: 263.6322rem;
     height: 431.2644rem;
     @include for-phone {
       display: none;
@@ -136,8 +156,8 @@
     background: rgb(8, 51, 142);
     background: linear-gradient(
       180deg,
-      rgba(8, 51, 142, 1) 62%,
-      rgba(255, 255, 255, 1) 62%
+      rgba(8, 51, 142, 1) 55.4%,
+      rgba(255, 255, 255, 1) 55.4%
     );
     header {
       padding-top: 105.295rem;
@@ -170,7 +190,20 @@
       justify-content: space-around;
       align-items: flex-start;
       flex-wrap: wrap;
-      padding: 0 205rem;
+      padding: 0 39rem;
+      position: relative;
+      z-index: 999;
+      &::before {
+        content: "";
+        position: absolute;
+        left: -149rem;
+        top: 416rem;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 241rem 241rem 0;
+        border-color: transparent #ec2028 transparent transparent;
+      }
       @include for-phone {
         background: linear-gradient(180deg, #08338e 16.5%, white 16.5%);
       }
@@ -188,6 +221,8 @@
 }
 #share-ideas {
   margin-top: 268.8784rem;
+  padding-left: 225.632193rem;
+  padding-right: 225.632193rem;
   @include for-phone {
     padding-left: 0;
     padding-right: 0;

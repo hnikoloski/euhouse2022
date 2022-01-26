@@ -3,6 +3,10 @@
   .archive-header {
     position: relative;
     margin-bottom: 250rem;
+    @include for-phone {
+      padding-top: 950rem;
+      margin-bottom: 1000rem;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -12,6 +16,11 @@
       height: 280.159973rem;
       background: url("../../assets/icons/chevron-down-decoration.svg");
       @include bg-props(cover, center, no-repeat);
+      @include for-phone {
+        height: 650rem;
+        width: 300rem;
+        top: 90rem;
+      }
     }
     h2 {
       padding: 0 37.6054rem;
@@ -23,6 +32,9 @@
       line-height: 1;
       width: fit-content;
       width: -moz-fit-content;
+      @include for-phone {
+        font-size: 400rem;
+      }
     }
   }
   .archive-wrapper {
@@ -44,6 +56,11 @@
       background: linear-gradient(180deg, #08338e 64.4%, white 64.4%);
       z-index: -1;
       pointer-events: none;
+      @include for-phone {
+        width: 100%;
+        top: 700rem;
+        height: 80%;
+      }
     }
     // &::after {
     //   content: "";
@@ -59,16 +76,27 @@
     // }
     .single-gallery {
       display: flex;
-
+      @include for-phone {
+        display: block;
+      }
       &:not(:last-of-type) {
         margin-bottom: 191.7874rem;
       }
       margin-right: 400.6571rem;
+      @include for-phone {
+        margin-right: 0;
+      }
       .img-wrapper {
         width: 1067.9924rem;
         height: 1060.4713rem;
         margin-right: 221.8717rem;
         flex: 0 0 auto;
+        @include for-phone {
+          width: 100%;
+          height: 3320rem;
+          margin-right: 0;
+          margin-bottom: 300rem;
+        }
       }
       .content {
         color: #fff;
@@ -77,6 +105,10 @@
           padding: 30.0843rem;
           margin-top: 28.204rem;
           margin-bottom: 94.0134rem;
+          @include for-phone {
+            padding: 100rem 180rem;
+            margin-bottom: 250rem;
+          }
           p {
             font-size: 37.6054rem;
             color: #fff;
@@ -84,6 +116,9 @@
             font-weight: $bold;
             line-height: 1;
             margin-bottom: 0;
+            @include for-phone {
+              font-size: 140rem;
+            }
           }
         }
         h2 {
@@ -91,12 +126,19 @@
           font-size: 67.6897rem;
           font-weight: $bold;
           text-transform: uppercase;
+          @include for-phone {
+            font-size: 200rem;
+          }
         }
         p {
           font-size: 45.1264rem;
           margin-bottom: 47.0067rem;
           &:not(:last-of-type) {
             margin-bottom: 30.0843rem;
+          }
+          @include for-phone {
+            font-size: 140rem;
+            margin-bottom: 240rem;
           }
         }
         .btn {
@@ -114,6 +156,9 @@
           top: 540.8765rem;
           background: url("../../assets/icons/stars-white-bg.svg");
           @include bg-props(cover, center, no-repeat);
+          @include for-phone {
+            display: none;
+          }
         }
       }
       &:nth-last-of-type(-n + 7) {
@@ -122,22 +167,42 @@
         width: 30%;
         margin-right: auto;
         flex-direction: column;
+        @include for-phone {
+          flex: 0 0 100%;
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 300rem;
+        }
         .img-wrapper {
           width: 100%;
           height: 535.8765rem;
           margin-right: 0;
+          @include for-phone {
+            height: 2040rem;
+            margin-bottom: 180rem;
+          }
         }
         .content {
           padding: 56.408rem 122.2174rem 94.0134rem 110.9358rem;
+          @include for-phone {
+            padding-left: 0;
+            padding-right: 0;
+          }
           h2 {
             font-size: 45.1264rem;
             font-weight: $bold;
             color: #000;
+            @include for-phone {
+              font-size: 160rem;
+            }
           }
           .date {
             margin-bottom: 33.8448rem;
             padding-left: 56.408rem;
             padding-right: 56.408rem;
+            @include for-phone {
+              margin-bottom: 150rem;
+            }
             p {
               display: block;
             }
@@ -435,6 +500,12 @@ body.page-template-blog-page {
       height: 65%;
       background: #08338e;
       z-index: -1;
+      @include for-phone {
+        width: 100%;
+        bottom: auto;
+        top: 2020rem;
+        height: calc(100% - 2020rem);
+      }
     }
     &::after {
       content: "";
@@ -445,6 +516,9 @@ body.page-template-blog-page {
       height: 451.2644rem;
       background: #0f2765;
       z-index: -1;
+      @include for-phone {
+        display: none;
+      }
     }
     .back-decorations {
       background: url("../../assets/icons/contact-deco-croped.svg");
@@ -454,6 +528,9 @@ body.page-template-blog-page {
       right: -150rem;
       width: 451.2644rem;
       height: 451.2644rem;
+      @include for-phone {
+        display: none;
+      }
     }
     .archive-wrapper {
       display: flex;
@@ -466,27 +543,47 @@ body.page-template-blog-page {
         flex: 0 0 auto;
         margin-right: 30rem;
         margin-bottom: 65.8094rem;
+        @include for-phone {
+          width: 100%;
+        }
         .img-wrapper {
           width: 100%;
           height: 582.8832rem;
+          @include for-phone {
+            height: 2020rem;
+          }
         }
         .content {
           padding: 54.5278rem 122.2174rem 122.2174rem 112.8161rem;
           background: #fff;
+          @include for-phone {
+            padding: 180rem 270rem;
+          }
           .date {
             background: #ec2028;
             padding: 28.204rem 65.8094rem;
             margin-bottom: 71.4502rem;
+            @include for-phone {
+              padding: 100rem 200rem;
+              margin-bottom: 170rem;
+            }
             p {
               color: #fff;
               font-size: 37.6054rem;
               font-weight: $bold;
+              @include for-phone {
+                font-size: 140rem;
+              }
             }
           }
           h2 {
             font-size: 45.1264rem;
             font-weight: $bold;
             margin-bottom: 94.0134rem;
+            @include for-phone {
+              font-size: 160rem;
+              margin-bottom: 350rem;
+            }
           }
         }
       }

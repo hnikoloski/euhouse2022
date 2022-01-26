@@ -108,13 +108,16 @@
     z-index: -1;
     &::before {
       top: auto;
-      bottom: -216rem;
+      bottom: -20rem;
+      background: url("../../assets/icons/contact-deco-croped.svg");
+      @include bg-props(100%, center, no-repeat);
+      height: 447.50385rem;
     }
     &::after {
       content: "";
       position: absolute;
-      bottom: 440.5833rem;
-      right: 0;
+      top: 1439.8928rem;
+      right: 44rem;
       width: 215.2907rem;
       height: 428.7012rem;
       background: url("../../assets/icons/chevron-down-decoration.svg");
