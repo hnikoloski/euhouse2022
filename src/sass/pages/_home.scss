@@ -17,7 +17,7 @@
     }
     .swiper {
       background: #08338e;
-      background: linear-gradient(180deg, white 18.9%, #08338e 18.9%);
+      background: linear-gradient(180deg, white 29.61%, #08338e 29.61%);
       padding-left: 110rem;
       padding-right: 110rem;
     }
@@ -203,6 +203,9 @@
         border-style: solid;
         border-width: 0 241rem 241rem 0;
         border-color: transparent #ec2028 transparent transparent;
+        @include for-phone {
+          display: none;
+        }
       }
       @include for-phone {
         background: linear-gradient(180deg, #08338e 16.5%, white 16.5%);

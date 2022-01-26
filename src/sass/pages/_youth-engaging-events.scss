@@ -54,7 +54,7 @@
       &::before {
         background: url("../../assets/icons/contact-deco-croped.svg");
         @include bg-props(contain, center, no-repeat);
-        top: 0;
+        top: -6rem;
         height: 464rem;
         left: -1rem;
         width: 450rem;
@@ -80,6 +80,21 @@
           }
         }
       }
+      .wpcf7-form-control-wrap.Location {
+        position: relative;
+        &::after {
+          content: "";
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 22.365902rem 22.365902rem 0 22.365902rem;
+          border-color: #c4c4c4 transparent transparent transparent;
+          position: absolute;
+          @include ver-center();
+          right: 63.929121rem;
+          pointer-events: none;
+        }
+      }
       .row {
         display: flex;
         flex-wrap: wrap;
@@ -89,7 +104,9 @@
           flex: 0 0 auto;
           width: 50%;
           &.d-flex {
-            display: block;
+            @include for-phone {
+              display: block;
+            }
           }
         }
         .col-12,
@@ -137,6 +154,12 @@
             padding: 160rem 200rem;
             font-size: 140rem;
           }
+        }
+        select {
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          position: relative;
         }
         input[type="date"],
         input[type="time"] {
