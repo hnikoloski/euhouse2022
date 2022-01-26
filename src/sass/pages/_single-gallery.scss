@@ -1,6 +1,9 @@
 body.single-gallery {
   header {
     margin-bottom: 176.7452rem;
+    @include for-phone {
+      margin-bottom: 350rem;
+    }
     .top-bar {
       display: flex;
       justify-content: space-between;
@@ -36,8 +39,14 @@ body.single-gallery {
       p {
         font-size: 45.1264rem;
         line-height: 1.5;
+        @include for-phone {
+          font-size: 160rem;
+        }
         &:not(:last-of-type) {
           margin-bottom: 47.0067rem;
+          @include for-phone {
+            margin-bottom: 180rem;
+          }
         }
       }
     }
@@ -47,6 +56,11 @@ body.single-gallery {
     padding-top: 218.1111rem;
     padding-bottom: 259.477rem;
     position: relative;
+    @include for-phone {
+      padding-top: 580rem;
+      padding-bottom: 580rem;
+      padding-left: 200rem;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -55,6 +69,9 @@ body.single-gallery {
       background: #08338e;
       height: 100%;
       width: 90%;
+      @include for-phone {
+        width: 100%;
+      }
     }
     &::after {
       content: "";
@@ -64,6 +81,9 @@ body.single-gallery {
       background: #0f2765;
       height: 30%;
       width: 10%;
+      @include for-phone {
+        display: none;
+      }
     }
     .gallery {
       position: relative;
@@ -76,12 +96,18 @@ body.single-gallery {
         height: 225.6322rem;
         background: url("../../assets/icons/stars-white-bg.svg");
         @include bg-props(cover, center, no-repeat);
+        @include for-phone {
+          display: none;
+        }
       }
       .swiper-btns-wrapper {
         position: absolute;
         @include ver-center();
         right: 235.0335rem;
         z-index: 9;
+        @include for-phone {
+          display: none;
+        }
         .swiper-button {
           width: 116.5766rem;
           height: 116.5766rem;
@@ -103,6 +129,10 @@ body.single-gallery {
         height: auto;
         img {
           background: #fff;
+          height: 1167.6466rem;
+          @include for-phone {
+            height: 2120rem;
+          }
         }
       }
     }

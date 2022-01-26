@@ -37,12 +37,20 @@ jQuery(document).ready(function ($) {
   });
   let singleGallerySliderInner = new Swiper(".single-gallery .single-gallery-slider ", {
     modules: [Navigation],
-    slidesPerView: '1.9',
-    loop: true,
-    spaceBetween: 30,
+    slidesPerView: '1.1',
+    loop: false,
+    spaceBetween: 10,
     navigation: {
       nextEl: ".single-gallery .swiper-button-next",
       prevEl: ".single-gallery .swiper-button-prev",
+    },
+    breakpoints: {
+      // when window width is >= 768
+      768: {
+        slidesPerView: '1.9',
+        spaceBetween: 30,
+
+      },
     },
   });
 
@@ -84,13 +92,21 @@ jQuery(document).ready(function ($) {
     });
     let newsLetterInnerSlider = new Swiper(".gallery-slider ", {
       modules: [Navigation],
-      slidesPerView: '1.7',
+      slidesPerView: '1.1',
       loop: true,
-      spaceBetween: 30,
+      spaceBetween: 10,
       navigation: {
         nextEl: ".gallery-slider .swiper-button-next",
         prevEl: ".gallery-slider .swiper-button-prev",
       },
+      breakpoints: {
+        // when window width is >= 768
+        768: {
+          slidesPerView: '1.7',
+          spaceBetween: 30,
+
+        },
+      }
     });
   }
 
@@ -101,3 +117,4 @@ jQuery(document).ready(function ($) {
 
   }
 });
+

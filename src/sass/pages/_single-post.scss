@@ -4,6 +4,14 @@ body.single-podcast {
     margin-bottom: 176.7452rem;
     padding-left: 455.0249rem;
     padding-right: 455.0249rem;
+    @include for-phone {
+      padding-top: 0;
+      padding-left: 150rem;
+      padding-right: 150rem;
+      &::before {
+        display: none;
+      }
+    }
     .top-bar {
       display: flex;
       justify-content: space-between;
@@ -14,11 +22,18 @@ body.single-podcast {
       p.heading {
         font-size: 37.6054rem;
         padding: 28.204rem 65.8094rem;
+        @include for-phone {
+          padding: 100rem 180rem;
+          font-size: 140rem;
+        }
       }
       a {
         font-size: 40.689rem;
         font-weight: $bold;
         color: #0f2765;
+        @include for-phone {
+          display: none;
+        }
         i {
           margin-right: 31.9646rem;
         }
@@ -37,6 +52,11 @@ body.single-podcast {
         padding: 0;
         margin-bottom: 75.2107rem;
         max-width: 2297.6878rem;
+        @include for-phone {
+          max-width: 100%;
+          font-size: 200rem;
+          margin-bottom: 200rem;
+        }
       }
       p {
         font-size: 45.1264rem;
@@ -59,6 +79,9 @@ body.single-podcast {
         bottom: 0;
         background: url("../../assets/icons/grouped-deco.svg");
         @include bg-props(contain, center, no-repeat);
+        @include for-phone {
+          display: none;
+        }
       }
       &::after {
         content: "";
@@ -69,6 +92,9 @@ body.single-podcast {
         @include bg-props(contain, center, no-repeat);
         width: 451.2644rem;
         height: 451.2644rem;
+        @include for-phone {
+          display: none;
+        }
       }
     }
   }
@@ -76,6 +102,9 @@ body.single-podcast {
     padding: 94.0134rem 455.0249rem;
     position: relative;
     overflow-x: hidden;
+    @include for-phone {
+      padding: 100rem 150rem;
+    }
     &::after {
       content: "";
       position: absolute;
@@ -85,6 +114,9 @@ body.single-podcast {
       @include bg-props(contain, center, no-repeat);
       width: 455.0249rem;
       height: 686.2979rem;
+      @include for-phone {
+        display: none;
+      }
     }
     p,
     h1,
@@ -95,6 +127,9 @@ body.single-podcast {
     h5,
     li {
       max-width: 2297.6878rem;
+      @include for-phone {
+        max-width: 100%;
+      }
     }
     figure.wp-block-image {
       width: 100%;
@@ -108,8 +143,14 @@ body.single-podcast {
     }
     p {
       font-size: 37.6054rem;
+      @include for-phone {
+        font-size: 160rem;
+      }
       &:not(:last-of-type) {
         margin-bottom: 56.408rem;
+        @include for-phone {
+          margin-bottom: 160rem;
+        }
       }
       a {
         color: $lblue;
@@ -132,31 +173,49 @@ body.single-podcast {
       font-size: 48.887rem;
       font-weight: $bold;
       margin-bottom: 33.8448rem;
+      @include for-phone {
+        font-size: 260rem;
+      }
     }
     h2 {
       font-size: 45.1264rem;
       font-weight: $bold;
       margin-bottom: 33.8448rem;
+      @include for-phone {
+        font-size: 240rem;
+      }
     }
     h3 {
       font-size: 41.3659rem;
       font-weight: $bold;
       margin-bottom: 33.8448rem;
+      @include for-phone {
+        font-size: 220rem;
+      }
     }
     h4 {
       font-size: 37.6054rem;
       font-weight: $bold;
       margin-bottom: 33.8448rem;
+      @include for-phone {
+        font-size: 200rem;
+      }
     }
     h5 {
       font-size: 33.8448rem;
       font-weight: $bold;
       margin-bottom: 33.8448rem;
+      @include for-phone {
+        font-size: 180rem;
+      }
     }
     h6 {
       font-size: 30.0843rem;
       font-weight: $bold;
       margin-bottom: 33.8448rem;
+      @include for-phone {
+        font-size: 160rem;
+      }
     }
     iframe {
       margin: 84.6121rem auto;
