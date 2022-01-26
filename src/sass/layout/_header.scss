@@ -132,6 +132,7 @@
         }
       }
       &.wpml-ls-item {
+        display: none;
         @include for-phone {
           display: none;
         }
