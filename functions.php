@@ -59,6 +59,10 @@ if (!function_exists('starter_setup')) :
             array(
                 'menu-1' => esc_html__('Primary', 'starter'),
                 'menu-2' => esc_html__('Footer', 'starter'),
+                'menu-3' => esc_html__('Footer-About', 'starter'),
+                'menu-4' => esc_html__('Footer-Services', 'starter'),
+                'menu-5' => esc_html__('Footer-Activities', 'starter'),
+                'menu-6' => esc_html__('Footer-Extras', 'starter'),
             )
         );
 
