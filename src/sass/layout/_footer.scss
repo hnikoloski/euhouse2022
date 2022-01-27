@@ -126,6 +126,7 @@
     }
   }
   .footer-bottom {
+    position: relative;
     background: #08338e;
     color: #fff;
     padding-top: 33.8448rem;
@@ -137,7 +138,7 @@
     @include for-phone {
       flex-wrap: wrap;
       padding-top: 360rem;
-      padding-bottom: 360rem;
+      padding-bottom: 750rem;
       padding-left: 200rem;
       padding-right: 200rem;
       p,
@@ -179,6 +180,44 @@
           &:hover {
             color: $lblue;
           }
+        }
+      }
+    }
+    .footer-signature {
+      position: absolute;
+      right: 130rem;
+      @include ver-center();
+      @include for-phone {
+        transform: translate(-50%, 0%);
+        -moz-transform: translate(-50%, 0%);
+        -webkit-transform: translate(-50%, 0%);
+        right: auto;
+        left: 50%;
+        top: auto;
+        bottom: 250rem;
+      }
+      a {
+        display: block;
+        width: 60.1686rem;
+        height: 60.1686rem;
+        position: relative;
+        @include for-phone {
+          width: 320rem;
+          height: 320rem;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: url("https://www.digitalpresent.io/static/media/symbol.a2b7a5f4.svg");
+          @include bg-props(contain, center, no-repeat);
+        }
+        &:hover {
+          -webkit-animation: rotate-scale-up 0.65s linear both;
+          animation: rotate-scale-up 0.65s linear both;
         }
       }
     }

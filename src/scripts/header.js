@@ -25,6 +25,7 @@ jQuery(document).ready(function ($) {
         $('#mob-menu-trigger').on('click', function () {
             $(this).toggleClass('active');
             $('#primary-menu').toggleClass('active');
+            $('body').toggleClass('menu-opened');
         })
         $('.sub-menu-trigger').on('click', function () {
             $(this).toggleClass('active');

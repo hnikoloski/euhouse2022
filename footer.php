@@ -13,6 +13,13 @@
             )
         );
         ?>
+        <div class="footer-signature">
+            <div class="developed-by">
+                <a href="https://www.digitalpresent.io/" target="_blank">
+
+                </a>
+            </div>
+        </div>
     </div>
 
 </footer><!-- #colophon -->
