@@ -315,7 +315,7 @@
         display: none;
       }
       &::before {
-        top: 53.2%;
+        top: calc(75% - 428rem);
         bottom: auto;
       }
     }
