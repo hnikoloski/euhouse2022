@@ -13,7 +13,7 @@ get_header();
 <header class="single-page-header page-padding-x">
 	<div class="top-bar">
 		<p class="heading red-bg w-fit-content"><?= get_the_date('j M'); ?></p>
-		<a href="/blog"><i class="fas fa-chevron-left"></i>BACK</a>
+		<a href="<?= get_post_type_archive_link('podcast'); ?>"><i class="fas fa-chevron-left"></i>BACK</a>
 	</div>
 	<div class="the-content">
 		<h2 class="heading"><?= the_title(); ?></h2>
@@ -23,7 +23,7 @@ get_header();
 	</div>
 </header>
 <main id="primary" class="site-main">
-	<iframe title="<?= the_title(); ?>" width="100%" height="232" allowtransparency="true" frameborder="0" allow="encrypted-media" src="<?= the_field('podcast_link'); ?>"></iframe>
+	<!-- 	<iframe title="<?= the_title(); ?>" width="100%" height="232" allowtransparency="true" frameborder="0" allow="encrypted-media" src="<?= the_field('podcast_link'); ?>"></iframe> -->
 	<?php the_content(); ?>
 
 </main><!-- #main -->

@@ -306,6 +306,36 @@
             font-weight: inherit;
           }
         }
+        &.high {
+          position: relative;
+          &::after {
+            position: absolute;
+            content: "";
+            background-color: #0f2765;
+            height: 100%;
+            right: -408rem;
+            top: 0;
+            width: 408rem;
+            @include for-phone {
+              display: none;
+            }
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            right: -408rem;
+            top: 0;
+            background: url("../../assets/icons/contact-deco-croped.svg");
+            @include bg-props(cover, center, no-repeat);
+            width: 408rem;
+            height: 408rem;
+            background-color: #fff;
+            z-index: 9;
+            @include for-phone {
+              display: none;
+            }
+          }
+        }
       }
     }
     .side-decoration {
@@ -317,6 +347,9 @@
       &::before {
         top: calc(75% - 428rem);
         bottom: auto;
+      }
+      &.high {
+        display: none;
       }
     }
   }

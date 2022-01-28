@@ -74,12 +74,11 @@
         <div class="footer-signature">
             <div class="developed-by">
                 <a href="https://www.digitalpresent.io/" target="_blank">
-
+                    <span class="screen-reader-text">Developed By Digital Present</span>
                 </a>
             </div>
         </div>
     </div>
-
 </footer><!-- #colophon -->
 </div><!-- #page -->
 

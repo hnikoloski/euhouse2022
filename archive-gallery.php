@@ -49,7 +49,7 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                             <p><?= get_the_date('j M'); ?></p>
                         </div>
                         <h2><?= the_title(); ?></h2>
-                        <?php the_content(); ?>
+                        <?php the_excerpt()  ?>
                         <a href="<?php the_permalink(); ?>" class="btn btn-blank">View More <i class="fal fa-long-arrow-right"></i></a>
                     </div>
                 </div>

@@ -30,6 +30,7 @@
                         <div class="top">
                             <h3 class="title"><?= get_the_title(); ?></h3>
                             <a href="<?= the_field('link_to_vr'); ?>" target="_blank" rel="noreferrer nofollow">
+                                <span class="screen-reader-text"><?= get_the_title(); ?> Virtual Room link</span>
                                 <i class="icon icon-360"></i>
                             </a>
                         </div>

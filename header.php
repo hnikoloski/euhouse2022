@@ -45,6 +45,7 @@
                     'container'      => false
                 )
             );
+
             ?>
 
         </header><!-- #masthead -->
@@ -52,25 +53,25 @@
             <ul>
                 <?php if (get_field('facebook_link', 'option')) : ?>
                     <li class="animated fadeInRight" data-delay="100">
-                        <a href="<?php the_field('facebook_link', 'option'); ?>" target="_blank" rel="noopener noreferrer" class="fb"><i class="fab fa-facebook-f"></i></a>
+                        <a href="<?php the_field('facebook_link', 'option'); ?>" target="_blank" rel="noopener noreferrer" class="fb"><span class="screen-reader-text">Facebook Link</span><i class="fab fa-facebook-f"></i></a>
                     </li>
                 <?php endif; ?>
 
                 <?php if (get_field('instagram_link', 'option')) : ?>
                     <li class="animated fadeInRight" data-delay="200">
-                        <a href="<?php the_field('instagram_link', 'option'); ?>" target="_blank" rel="noopener noreferrer" class="ig"><i class="fab fa-instagram"></i></a>
+                        <a href="<?php the_field('instagram_link', 'option'); ?>" target="_blank" rel="noopener noreferrer" class="ig"><span class="screen-reader-text">Instagram Link</span><i class="fab fa-instagram"></i></a>
                     </li>
                 <?php endif; ?>
 
                 <?php if (get_field('twitter_link', 'option')) : ?>
                     <li class="animated fadeInRight" data-delay="300">
-                        <a href="<?php the_field('twitter_link', 'option'); ?>" target="_blank" rel="noopener noreferrer" class="tw"><i class="fab fa-twitter"></i></a>
+                        <a href="<?php the_field('twitter_link', 'option'); ?>" target="_blank" rel="noopener noreferrer" class="tw"><span class="screen-reader-text">Twitter Link</span><i class="fab fa-twitter"></i></a>
                     </li>
                 <?php endif; ?>
 
                 <?php if (get_field('youtube_link', 'option')) : ?>
                     <li class="animated fadeInRight" data-delay="400">
-                        <a href="<?php the_field('youtube_link', 'option'); ?>" target="_blank" rel="noopener noreferrer" class="yt"><i class="fab fa-youtube"></i></a>
+                        <a href="<?php the_field('youtube_link', 'option'); ?>" target="_blank" rel="noopener noreferrer" class="yt"><span class="screen-reader-text">Youtube Link</span><i class="fab fa-youtube"></i></a>
                     </li>
                 <?php endif; ?>
             </ul>

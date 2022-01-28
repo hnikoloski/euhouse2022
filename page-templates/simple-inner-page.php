@@ -16,11 +16,11 @@ get_header(); ?>
             </div>
 
         </header>
-        <div class="content">
+        <div class="content <?= the_field('side_decoration_height'); ?>">
             <?= the_content(); ?>
         </div>
     </div>
-    <div class="side-decoration"></div>
+    <div class="side-decoration <?= the_field('side_decoration_height'); ?>"></div>
 
 </main>
 <?php get_footer(); ?>

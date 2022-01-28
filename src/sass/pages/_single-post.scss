@@ -101,9 +101,21 @@ body.single-podcast {
   main {
     padding: 94.0134rem 455.0249rem;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
     @include for-phone {
       padding: 100rem 150rem;
+    }
+    .alignleft {
+      float: left;
+      margin: 1em 1em 2em 0;
+    }
+    .aligncenter {
+      display: block;
+      margin: 1em auto;
+    }
+    .alignright {
+      float: right;
+      margin: 1em 0 2em 1em;
     }
     &::after {
       content: "";
