@@ -52,7 +52,7 @@
                                                         echo substr($thetitle, 0, $thelength);
                                                         if ($getlength > $thelength) echo "...";
                                                         ?></h3>
-                                    <a href="<?= get_the_permalink(); ?>" class="btn btn-blank">View More <i class="fal fa-long-arrow-right"></i></a>
+                                    <a href="<?= get_the_permalink(); ?>" class="btn btn-blank"><?= __('View More', 'starter'); ?> <i class="fal fa-long-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -66,7 +66,7 @@
     </div>
     <footer>
         <div class="wrapper">
-            <a href="<?= get_post_type_archive_link('gallery'); ?>" class="btn btn-white mx-auto yellow-deco">View More <i class="fal fa-long-arrow-right"></i></a>
+            <a href="<?= get_post_type_archive_link('gallery'); ?>" class="btn btn-white mx-auto yellow-deco"><?= __('View More', 'starter'); ?> <i class="fal fa-long-arrow-right"></i></a>
         </div>
     </footer>
 </section>

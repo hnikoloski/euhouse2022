@@ -99,6 +99,7 @@
       animation: rotateMenu 400ms ease-in-out forwards;
       transform-origin: top center;
       &.active {
+        padding-bottom: 616rem;
         display: block;
         max-height: 80vh;
         overflow-y: auto;
@@ -123,8 +124,36 @@
       }
       &.wpml-ls-item {
         display: none;
+        .wpml-ls-flag {
+          width: 36rem;
+          height: 25rem;
+          object-fit: contain;
+          -o-object-fit: contain;
+          -o-object-position: center;
+          object-position: center;
+        }
+        .wpml-ls-native {
+          font-weight: $bold;
+          text-transform: uppercase;
+        }
         @include for-phone {
           display: none;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 50%;
+          text-align: center;
+          &.wpml-ls-current-language {
+            background: #f2f2f2;
+          }
+          .sub-menu-trigger {
+            display: none;
+          }
+          a {
+            .wpml-ls-native {
+              font-weight: $bold;
+            }
+          }
         }
         a {
           .wpml-ls-native {
@@ -135,13 +164,28 @@
           }
         }
         .sub-menu {
-          width: 200rem;
+          width: 206rem;
           @include for-phone {
-            width: auto;
+            display: block !important;
+            position: absolute;
+            right: -100%;
+            width: 100%;
+            height: 100%;
+            padding-top: 0;
+            top: 0;
+
+            li {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 100%;
+            }
           }
           a {
             .wpml-ls-native {
               display: inline-block;
+              font-weight: $bold;
+              text-transform: uppercase;
             }
           }
         }
@@ -186,6 +230,11 @@
                 -moz-transform: rotate(180deg);
                 -webkit-transform: rotate(180deg);
               }
+            }
+          }
+          &.wpml-ls-item {
+            .sub-menu-trigger {
+              display: none;
             }
           }
         }

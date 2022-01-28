@@ -67,4 +67,26 @@ jQuery(document).ready(function ($) {
   }
   // Cookie notice end
   $('.current-year').text(new Date().getFullYear());
+
+
+  if (window.location.hash == '#devmode') {
+    $('#masthead #primary-menu li.wpml-ls-item, #masthead #primary-menu li.wpml-ls-item a .wpml-ls-native').show();
+  }
+  if ($('.youth-engaging-events .content').length) {
+    $('.youth-engaging-events .contact-form .row .col button').on('click', function () {
+      $('#timeFromRes').val($('#timeFrom').val())
+      $('#timeToRes').val($('#timeTo').val())
+      console.log($('#timeFromRes').val())
+      console.log($('#timeToRes').val())
+    })
+    document.addEventListener('wpcf7invalid', function (event) {
+      $('.youth-engaging-events .content').addClass('error');
+      $('.youth-engaging-events .content').removeClass('success');
+    }, false);
+
+    document.addEventListener('wpcf7mailsent', function (event) {
+      $('.youth-engaging-events .content').addClass('success');
+      $('.youth-engaging-events .content').removeClass('error');
+    }, false);
+  }
 });

@@ -8,7 +8,7 @@ $pageID = get_option('page_on_front');
         <div class="col">
             <h3 class="animated text-animation add-active"><?= the_field('title_ideas', $pageID) ?></h3>
             <?= the_field('sub_title_ideas', $pageID); ?>
-            <a href="/better-eu" class="btn btn-blue blue-deco">View More <i class="fal fa-long-arrow-right"></i></a>
+            <a href="/better-eu" class="btn btn-blue blue-deco"><?= __('View More', 'starter'); ?> <i class="fal fa-long-arrow-right"></i></a>
         </div>
     </div>
 </div>

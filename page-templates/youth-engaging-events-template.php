@@ -14,17 +14,10 @@ get_header(); ?>
             </div>
         </header>
         <div class="content d-flex align-content-center flex-wrap justify-content-space-between align-items-center animated fadeInUp">
-            <div class="form-wrapper">
-                <?php $cf7EventForm = get_field('event_form_short_code');
-                echo do_shortcode($cf7EventForm); ?>
-            </div>
+            <?php $cf7EventForm = get_field('event_form_short_code');
+            echo do_shortcode($cf7EventForm); ?>
             <div class="side-decoration"></div>
         </div>
-    </div>
-    <div class="contact-form">
-        <h3 class="heading">Contact</h3>
-        <?php $cf7ContactForm = get_field('contact_form_code');
-        echo do_shortcode($cf7ContactForm); ?>
     </div>
 </main>
 <?php get_footer(); ?>

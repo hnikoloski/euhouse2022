@@ -19,14 +19,14 @@ get_header(); ?>
         <i class="card-icon"></i>
         <div class="content">
             <h3>BLOG</h3>
-            <a href="/blog" class="btn btn-white">View More <i class="fal fa-long-arrow-right"></i></a>
+            <a href="/blog" class="btn btn-white"><?= __('View More', 'starter'); ?> <i class="fal fa-long-arrow-right"></i></a>
         </div>
     </div>
     <div class="single-card podcast" style="background: url(<?= the_field('podcast_box_background'); ?>); background-size:cover; background-repeat:no-repeat; background-position:center;">
         <i class="card-icon"></i>
         <div class="content">
             <h3>PODCAST</h3>
-            <a href="/podcast" class="btn btn-white">View More <i class="fal fa-long-arrow-right"></i></a>
+            <a href="/podcast" class="btn btn-white"><?= __('View More', 'starter'); ?> <i class="fal fa-long-arrow-right"></i></a>
         </div>
     </div>
 </main>

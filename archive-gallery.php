@@ -50,7 +50,7 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                         </div>
                         <h2><?= the_title(); ?></h2>
                         <?php the_excerpt()  ?>
-                        <a href="<?php the_permalink(); ?>" class="btn btn-blank">View More <i class="fal fa-long-arrow-right"></i></a>
+                        <a href="<?php the_permalink(); ?>" class="btn btn-blank"><?= __('View More', 'starter'); ?> <i class="fal fa-long-arrow-right"></i></a>
                     </div>
                 </div>
         <?php

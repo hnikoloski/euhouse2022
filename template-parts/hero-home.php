@@ -21,7 +21,7 @@
                 <?php } ?>
                 <h2 class="heading w-fit-content"><?= $title; ?></h2>
 
-                <a href="<?= $permalink; ?>" class="btn btn-blue">View More <i class="fal fa-long-arrow-right"></i></a>
+                <a href="<?= $permalink; ?>" class="btn btn-blue"><?= __('View More', 'starter'); ?> <i class="fal fa-long-arrow-right"></i></a>
             <?php endforeach; ?>
         <?php endif; ?>
     </div>
