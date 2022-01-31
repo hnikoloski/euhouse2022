@@ -13,7 +13,7 @@ get_header();
 <header class="single-page-header page-padding-x">
 	<div class="top-bar">
 		<p class="heading red-bg w-fit-content"><?= get_the_date('j M'); ?></p>
-		<a href="<?= get_post_type_archive_link('podcast'); ?>"><i class="fas fa-chevron-left"></i>BACK</a>
+		<a href="<?= get_post_type_archive_link('podcast'); ?>"><i class="fas fa-chevron-left"></i><?= __('BACK', 'starter'); ?></a>
 	</div>
 	<div class="the-content">
 		<h2 class="heading"><?= the_title(); ?></h2>

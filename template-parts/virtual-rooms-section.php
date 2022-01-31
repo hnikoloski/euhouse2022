@@ -1,8 +1,8 @@
 <section id="virtual-rooms">
     <div class="section-wrapper">
         <header>
-            <h2 class="heading">Virtual Rooms</h2>
-            <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            <h2 class="heading"><?= the_field('virtual_rooms_title_home', get_option('page_on_front')); ?></h2>
+            <p class="subtitle"><?= the_field('virtual_rooms_sub_title_home', get_option('page_on_front')); ?></p>
         </header>
         <div class="cards-wrapper">
             <?php
@@ -30,7 +30,7 @@
                         <div class="top">
                             <h3 class="title"><?= get_the_title(); ?></h3>
                             <a href="<?= the_field('link_to_vr'); ?>" target="_blank" rel="noreferrer nofollow">
-                                <span class="screen-reader-text"><?= get_the_title(); ?> Virtual Room link</span>
+                                <span class="screen-reader-text"><?= get_the_title(); ?> <?= __('Virtual Room link', 'starter'); ?></span>
                                 <i class="icon icon-360"></i>
                             </a>
                         </div>

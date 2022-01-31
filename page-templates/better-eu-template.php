@@ -5,9 +5,9 @@
  */
 get_header(); ?>
 <header class="single-page-header page-padding-x d-flex flex-wrap">
-    <h2 class="heading w-fit-content p-0">Easy steps to </h2>
+    <h2 class="heading w-fit-content p-0"><?= __('Easy steps to', 'starter'); ?> </h2>
     <span class="space"></span>
-    <h2 class="heading yellow-bg w-fit-content">change happen.</h2>
+    <h2 class="heading yellow-bg w-fit-content"><?= __('change happen.', 'starter'); ?></h2>
     <?php if (get_field('subtitle')) : ?>
         <p class="subtitle w-100">
             <?= the_field('subtitle'); ?>

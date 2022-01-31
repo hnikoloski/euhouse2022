@@ -7,7 +7,6 @@
                 $permalink = get_permalink($featured_post->ID);
                 $title = get_the_title($featured_post->ID);
                 $post_tags = get_the_tags($featured_post->ID);
-
             ?>
                 <div class="date w-fit-content">
                     <p><i class="fas fa-calendar-alt"></i> <?= get_the_date('j M'); ?></p>
@@ -20,7 +19,6 @@
                     </div>
                 <?php } ?>
                 <h2 class="heading w-fit-content"><?= $title; ?></h2>
-
                 <a href="<?= $permalink; ?>" class="btn btn-blue"><?= __('View More', 'starter'); ?> <i class="fal fa-long-arrow-right"></i></a>
             <?php endforeach; ?>
         <?php endif; ?>
