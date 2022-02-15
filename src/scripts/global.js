@@ -2,14 +2,19 @@ jQuery(document).ready(function ($) {
   $("a[href='nolink']").on("click", function (e) {
     e.preventDefault();
   });
-
+  $("a[href='http://nolink']").on("click", function (e) {
+    e.preventDefault();
+  });
+  $("a[href='https://nolink']").on("click", function (e) {
+    e.preventDefault();
+  });
   if ($(".try-to-hide").length) {
     // if($('.try-to-hide').hasClass)
     $(`.try-to-hide.${$(".checkCountry").val()}`).hide();
   }
   if ($(window).width() > 500) {
-    $("#masthead #primary-menu li a").addClass(
-      "fancy-hover fancy-hover-lblue"
+    $("#masthead #primary-menu li").addClass(
+      "fancy-hover fancy-hover-dblue"
     );
   }
   //Cookie Functions

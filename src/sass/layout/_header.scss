@@ -114,12 +114,17 @@
         line-height: 1;
         padding: 240rem 0;
       }
+      &:after {
+        height: 24.4435rem;
+        background: #08338e;
+        bottom: -3rem;
+      }
       &:not(:last-of-type) {
         margin-right: 174.86495rem;
         @include for-phone {
           margin-right: 0;
           margin-bottom: 0;
-          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+          // border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
       }
       &.wpml-ls-item {
@@ -195,6 +200,8 @@
         font-weight: $bold;
         letter-spacing: 0.02em;
         color: $dblue;
+        display: block;
+        line-height: 176.485634rem;
         @include for-phone {
           font-size: 160rem;
           padding: 0 200rem;
@@ -242,13 +249,15 @@
       .sub-menu {
         position: absolute;
         z-index: 99;
-        // border: 1px solid #08338e;
         box-shadow: 0 5.6408rem 11.2816rem rgba(8, 51, 142, 0.16);
         background: #fff;
         perspective: 1000px;
         animation: rotateMenu 400ms ease-in-out forwards;
         transform-origin: top center;
         display: none;
+        min-width: 286.0537rem;
+        padding: 77.091rem;
+        border: 1.8803rem solid #08338e;
         @include for-phone {
           position: relative;
           transform: scaleY(1);
@@ -258,28 +267,83 @@
           padding: 200rem 0 0 0;
           box-shadow: none;
           transition: 0s;
+          border: none;
         }
         li {
           line-height: 1.1;
-          padding: 41.3659rem 47.0067rem;
+          padding: 0;
           width: 100%;
           @include for-phone {
-            padding: 160rem 200rem;
+            padding: 0 200rem;
+          }
+          &::after {
+            display: none;
           }
           &:not(:last-of-type) {
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            // border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            margin-bottom: 60.1686rem;
+            padding-bottom: 0;
+            padding-top: 0;
             @include for-phone {
-              margin-bottom: 0;
+              margin-bottom: 150rem;
+              padding-bottom: 150rem;
             }
           }
           a {
             font-size: 30.0843rem;
+            line-height: 1;
+
             @include for-phone {
               font-size: 140rem;
               padding: 0;
-              font-weight: $regular;
               text-transform: capitalize;
               font-size: 140rem;
+              font-weight: $medium;
+            }
+            &:hover {
+              color: $lblue;
+            }
+          }
+          &.menu-item-has-children {
+            padding-bottom: 0;
+            padding-top: 0;
+            @include for-phone {
+              padding-bottom: 150rem;
+              .sub-menu-trigger {
+                top: 0;
+              }
+            }
+            .sub-menu {
+              // display: block;
+              position: relative;
+              box-shadow: none;
+              background: transparent;
+              padding: 0;
+              margin-top: 31.9646rem;
+              border: none;
+              @include for-phone {
+                display: none;
+              }
+              li {
+                padding-left: 0;
+                border-bottom: none;
+                padding: 0;
+                margin-bottom: 0;
+                @include for-phone {
+                  &:first-of-type {
+                    margin-top: 160rem;
+                  }
+                }
+                &:not(:last-of-type) {
+                  margin-bottom: 30.0843rem;
+                  @include for-phone {
+                    margin-bottom: 90rem;
+                  }
+                }
+                a {
+                  font-weight: $regular;
+                }
+              }
             }
           }
         }

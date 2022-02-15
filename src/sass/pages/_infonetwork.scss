@@ -1,0 +1,15 @@
+.page-template-infonetwork-page {
+  #map_wrapper {
+    height: 1410.2012rem;
+    @include for-phone {
+      height: 4000rem;
+    }
+    * {
+      transition: 0s;
+    }
+    .mapping {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
