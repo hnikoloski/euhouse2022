@@ -138,3 +138,7 @@ body.single-gallery {
     }
   }
 }
+
+.fancybox__container {
+  z-index: 9999 !important;
+}
