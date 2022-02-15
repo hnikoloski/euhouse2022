@@ -1,0 +1,67 @@
+body.search-results {
+  #primary {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-around;
+    .page-header {
+      flex: 0 0 100%;
+      width: 100%;
+      margin-bottom: 84.6121rem;
+      @include for-phone {
+        margin-bottom: 350rem;
+      }
+      h1 {
+        text-align: center;
+        font-size: 71.4502rem;
+        font-family: $roboto;
+        color: $dblue;
+        font-weight: $regular;
+        @include for-phone {
+          font-size: 180rem;
+        }
+        span {
+          font-family: inherit;
+          font-weight: $bold;
+
+          color: inherit;
+        }
+      }
+    }
+    .card {
+      width: auto;
+      flex: 0 0 auto;
+      max-width: 30%;
+      @include for-phone {
+        max-width: 100%;
+        flex: 0 0 100%;
+        margin-bottom: 350rem;
+      }
+      .img-wrapper {
+        width: 100%;
+        height: 658.0939rem;
+        top: -1rem;
+        @include for-phone {
+          height: 2300rem;
+        }
+      }
+      .content {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 47.0067rem 0 97.774rem 0;
+        .title {
+          color: #0f2765;
+          font-size: 48.887rem;
+          font-weight: 700;
+          line-height: 1.4;
+          @include for-phone {
+            font-size: 180rem;
+          }
+        }
+      }
+    }
+  }
+}

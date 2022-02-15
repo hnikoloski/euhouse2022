@@ -37,6 +37,7 @@
             <a href="<?= get_home_url(); ?>" class="logo-wrapper d-block">
                 <img src="<?= $logoUrl[0]; ?>" alt="<?= get_bloginfo(); ?>" class="full-size-img full-size-img-cover">
             </a>
+
             <?php
             wp_nav_menu(
                 array(
@@ -47,7 +48,12 @@
             );
 
             ?>
-
+            <form action="/" method="get">
+                <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="Search Here..." />
+                <input type="hidden" name="post_type" value="post newsletter" />
+                <button class="disabled search-btn" aria-label="Search button"><i class="far fa-search"></i></button>
+                <button class="search-close" aria-label="Close Search"><i class="fas fa-times"></i></button>
+            </form>
         </header><!-- #masthead -->
         <aside id="social-links" class="animated fadeInRight">
             <ul>
