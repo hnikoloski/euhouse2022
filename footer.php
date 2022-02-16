@@ -8,7 +8,6 @@
             <?= the_field('about_content', 'option'); ?>
         </div>
         <div class="col">
-            <h2><?= __('About Us', 'starter'); ?></h2>
             <?php
             wp_nav_menu(
                 array(
@@ -20,7 +19,6 @@
             ?>
         </div>
         <div class="col">
-            <h2><?= __('Services', 'starter'); ?></h2>
             <?php
             wp_nav_menu(
                 array(
@@ -32,7 +30,6 @@
             ?>
         </div>
         <div class="col">
-            <h2><?= __('Activities', 'starter'); ?></h2>
             <?php
             wp_nav_menu(
                 array(

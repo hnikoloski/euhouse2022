@@ -5,14 +5,18 @@
   }
   .footer-top {
     padding-top: 259.477rem;
-    padding-bottom: 84.6121rem;
+    padding-bottom: 184.6121rem;
     position: relative;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-content: flex-start;
     align-items: flex-start;
     flex-direction: row;
+    @include for-phone {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -26,8 +30,9 @@
       flex: 0 0 16.5%;
       width: 16.5%;
       &:nth-of-type(1) {
-        flex: 0 0 28%;
-        width: 28%;
+        flex: 0 0 806.6351rem;
+        width: 806.6351rem;
+        margin-right: 428.7012rem;
       }
       @include for-phone {
         flex: 0 0 100%;
@@ -108,12 +113,13 @@
       }
     }
     ul {
-      max-width: 95%;
+      max-width: 90%;
       li,
       li a {
         font-size: 33.8448rem;
-        color: #000;
+        color: #08338e;
         line-height: 1.25;
+        font-weight: $bold;
         @include for-phone {
           font-size: 160rem;
         }
@@ -128,6 +134,20 @@
         a {
           &:hover {
             text-decoration: underline;
+          }
+        }
+        &.menu-item-has-children {
+          .sub-menu {
+            padding-top: 47.0067rem;
+            li {
+              &:not(:last-of-type) {
+                margin-bottom: 30.0843rem;
+              }
+              a {
+                font-weight: $regular;
+                color: #000;
+              }
+            }
           }
         }
       }
@@ -175,6 +195,10 @@
       flex-direction: row;
       flex: 0 0 auto;
       max-width: 50%;
+      @include for-phone {
+        max-width: 100%;
+        flex: 0 0 100%;
+      }
       a {
         width: 362.8918rem;
         height: 112.8161rem;
@@ -185,6 +209,9 @@
         }
         &:nth-of-type(1) {
           margin-right: 43.2462rem;
+          @include for-phone {
+            margin-right: 182rem;
+          }
         }
         img {
           @include fullSizeImg(cover);
@@ -198,6 +225,13 @@
       }
     }
     .form-wrapper {
+      outline-offset: 25rem;
+      @include for-phone {
+        flex: 0 0 100%;
+        width: 100%;
+        margin-top: 250rem;
+        outline: none;
+      }
       br {
         display: none;
       }
@@ -206,20 +240,37 @@
         font-weight: $bold;
         display: block;
         color: #0f2765;
+        @include for-phone {
+          font-size: 160rem;
+        }
       }
       .container {
         display: flex;
         flex-wrap: wrap;
-        align-items: flex-end;
-        align-content: flex-end;
+        align-items: flex-start;
+        align-content: flex-start;
         .col {
           flex: 0 0 auto;
+          position: relative;
+          @include for-phone {
+            flex: 0 0 100%;
+            width: 100%;
+          }
           &:first-of-type {
             width: 838.5997rem;
             margin-right: 50.7672rem;
+            @include for-phone {
+              width: 100%;
+              margin-right: 0;
+            }
           }
           &:last-of-type {
-            width: auto;
+            width: 376.0537rem;
+            flex: 0 0 376.0537rem;
+            @include for-phone {
+              flex: 0 0 100%;
+              width: 100%;
+            }
             button {
               border: none;
               box-shadow: none;
@@ -227,10 +278,23 @@
               font-size: 33.8448rem;
               font-weight: $bold;
               color: #fff;
-              padding: 37.6054rem 71.4502rem;
+              cursor: pointer;
+              // padding: 37.6054rem 71.4502rem;
+              width: 376.0537rem;
+              height: 112.8161rem;
+              @include for-phone {
+                width: 100%;
+                height: auto;
+                padding: 150rem 250rem;
+                font-size: 160rem;
+                margin-top: 150rem;
+              }
               i {
                 margin-left: 65.8094rem;
               }
+            }
+            .ajax-loader {
+              position: absolute;
             }
           }
         }
@@ -250,6 +314,10 @@
           padding: 18.8027rem 1.8803rem;
           @include borderRadius(0rem);
           width: 100%;
+          @include for-phone {
+            font-size: 160rem;
+            padding: 150rem 10rem;
+          }
         }
       }
     }

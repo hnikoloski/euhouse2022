@@ -23,6 +23,9 @@ $sidePadding: var(--side-padding);
 // $sidePadding: 160rem;
 
 // Custom classes
+.d-none {
+  display: none;
+}
 .w-fit-content {
   width: fit-content;
   width: -moz-fit-content;

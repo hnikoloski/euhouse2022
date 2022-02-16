@@ -17,6 +17,14 @@ jQuery(document).ready(function ($) {
       "fancy-hover fancy-hover-dblue"
     );
   }
+
+  $('.subscribe-wrapper a').on('click', function (e) {
+    $('.site-footer .footer-middle .form-wrapper').css('outline', '5rem dotted #ea1d27')
+    setTimeout(function () {
+      $('.site-footer .footer-middle .form-wrapper').css('outline', 'none');
+    }
+      , 2500);
+  })
   //Cookie Functions
   function readCookie(name) {
     var nameEQ = name + "=";

@@ -1,0 +1,194 @@
+body.single-events {
+  .single-page-header {
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      align-content: center;
+      flex-wrap: wrap;
+      flex-direction: row;
+      a {
+        font-size: 40.689rem;
+        font-weight: 700;
+        color: #0f2765;
+        @include for-phone {
+          display: none;
+        }
+        i {
+          margin-right: 31.9646rem;
+        }
+        &:hover {
+          i {
+            margin-right: 45rem;
+          }
+        }
+      }
+    }
+  }
+  #primary {
+    .event-meta {
+      margin-bottom: 84.6121rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      align-content: center;
+      flex-wrap: wrap;
+      flex-direction: row;
+      @include for-phone {
+        margin-bottom: 220rem;
+      }
+      h4 {
+        font-size: 60.1686rem;
+        @include for-phone {
+          font-size: 200rem;
+          flex: 0 0 100%;
+          width: 100%;
+        }
+      }
+      a {
+        font-size: 40.689rem;
+        font-weight: 700;
+        color: #0f2765;
+        width: -moz-fit-content;
+        width: fit-content;
+        i {
+          margin-left: 28.204rem;
+          @include for-phone {
+            margin-left: 150rem;
+          }
+        }
+        @include for-phone {
+          flex: 0 0 auto;
+          width: -moz-fit-content;
+          width: fit-content;
+          margin-top: 150rem;
+          font-size: 200rem;
+          display: block;
+        }
+        &:hover {
+          text-decoration: underline;
+          color: $lblue;
+        }
+      }
+    }
+    .alignleft {
+      float: left;
+      margin: 1em 1em 2em 0;
+    }
+    .aligncenter {
+      display: block;
+      margin: 1em auto;
+    }
+    .alignright {
+      float: right;
+      margin: 1em 0 2em 1em;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h5,
+    li {
+      @include for-phone {
+        max-width: 100%;
+      }
+    }
+    figure.wp-block-image {
+      width: 100%;
+      height: auto;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    p {
+      font-size: 37.6054rem;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      @include for-phone {
+        font-size: 160rem;
+      }
+      &:not(:last-of-type) {
+        margin-bottom: 56.408rem;
+        @include for-phone {
+          margin-bottom: 160rem;
+        }
+      }
+      a {
+        color: $lblue;
+        strong,
+        b {
+          font-weight: $bold;
+          color: $lblue;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      strong,
+      b {
+        font-weight: $bold;
+        font-size: inherit;
+      }
+    }
+    h1 {
+      font-size: 48.887rem;
+      font-weight: $bold;
+      margin-bottom: 33.8448rem;
+      @include for-phone {
+        font-size: 260rem;
+      }
+    }
+    h2 {
+      font-size: 45.1264rem;
+      font-weight: $bold;
+      margin-bottom: 33.8448rem;
+      @include for-phone {
+        font-size: 240rem;
+      }
+    }
+    h3 {
+      font-size: 41.3659rem;
+      font-weight: $bold;
+      margin-bottom: 33.8448rem;
+      @include for-phone {
+        font-size: 220rem;
+      }
+    }
+    h4 {
+      font-size: 37.6054rem;
+      font-weight: $bold;
+      margin-bottom: 33.8448rem;
+      @include for-phone {
+        font-size: 200rem;
+      }
+    }
+    h5 {
+      font-size: 33.8448rem;
+      font-weight: $bold;
+      margin-bottom: 33.8448rem;
+      @include for-phone {
+        font-size: 180rem;
+      }
+    }
+    h6 {
+      font-size: 30.0843rem;
+      font-weight: $bold;
+      margin-bottom: 33.8448rem;
+      @include for-phone {
+        font-size: 160rem;
+      }
+    }
+    iframe {
+      margin: 84.6121rem auto;
+    }
+  }
+}
