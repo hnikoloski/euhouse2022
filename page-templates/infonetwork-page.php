@@ -2,7 +2,7 @@
 
 /*Template Name: Info network*/
 
-get_header('inner'); ?>
+get_header(); ?>
 
 
 <header class="single-page-header page-padding-x">

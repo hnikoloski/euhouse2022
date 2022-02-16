@@ -597,7 +597,9 @@ body.page-template-blog-page {
   }
 }
 
-.post-type-archive-events {
+.post-type-archive-events,
+.page-template-past-events,
+.page-template-embassy-events {
   #primary {
     .container {
       .row {

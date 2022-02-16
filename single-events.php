@@ -13,7 +13,6 @@ get_header();
 <header class="single-page-header page-padding-x">
 	<div class="top-bar">
 		<h2 class="heading red-bg w-fit-content"><?= the_title(); ?></h2>
-		<a href="<?= get_post_type_archive_link(get_post_type()) ?>"><i class="fas fa-chevron-left"></i><?= __('BACK', 'starter'); ?></a>
 	</div>
 
 </header>
