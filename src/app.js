@@ -8,3 +8,4 @@ import "./scripts/share";
 import "./scripts/fancybox";
 import "./scripts/mobile-app-page";
 import "./scripts/grid-generator";
+import "./scripts/events";

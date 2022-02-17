@@ -55,12 +55,20 @@ get_header();
             while ($query->have_posts()) {
                 $query->the_post();
             ?>
-                <div class="row">
+                <div class="row" data-link="<?php the_permalink(); ?>">
                     <div class="col col-title">
                         <h4><?php the_title(); ?></h4>
                     </div>
                     <div class="col col-date">
-                        <h5><?php the_field('event_date'); ?></h5>
+                        <h5><?php
+                            if (get_field('event_date')) {
+                                $theDate = get_field('event_date');
+                                echo date('M j, Y', strtotime($theDate));
+                            } else {
+                                echo 'TBD';
+                            }
+                            ?>
+                        </h5>
                     </div>
                     <div class="col col-img">
                         <div class="img-wrapper">

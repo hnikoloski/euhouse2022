@@ -609,6 +609,14 @@ body.page-template-blog-page {
         justify-content: space-between;
         align-content: center;
         padding: 37.6054rem 9.4013rem;
+        @include for-phone {
+          padding: 100rem 10rem;
+          &:not(:first-of-type) {
+            &:hover {
+              background: rgba(0, 0, 0, 0.05);
+            }
+          }
+        }
         &:not(:last-of-type) {
           border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
@@ -623,6 +631,16 @@ body.page-template-blog-page {
 
           &:not(:last-of-type) {
             border-right: 1px solid rgba(0, 0, 0, 0.05);
+            @include for-phone {
+              border-right: 0;
+            }
+          }
+          @include for-phone {
+            padding: 150rem;
+            &:nth-of-type(1),
+            &:nth-of-type(3) {
+              border-right: 1px solid rgba(0, 0, 0, 0.05);
+            }
           }
           h3 {
             font-size: 48.887rem;
@@ -630,33 +648,61 @@ body.page-template-blog-page {
             text-transform: uppercase;
             color: $dblue;
             text-align: left;
+            @include for-phone {
+              font-size: 160rem;
+            }
           }
           &-title {
             width: 40%;
+            @include for-phone {
+              width: 50%;
+            }
             h4 {
               font-size: 41.3659rem;
               color: $dblue;
+              @include for-phone {
+                font-size: 140rem;
+                text-align: center;
+              }
             }
           }
           &-date {
             width: 25%;
+            @include for-phone {
+              width: 50%;
+            }
             h5 {
               font-size: 30rem;
               font-weight: $semiBold;
               color: $dblue;
+              @include for-phone {
+                font-size: 140rem;
+                text-align: center;
+                font-weight: $regular;
+              }
             }
           }
           &-img {
             width: 15%;
+            @include for-phone {
+              display: none;
+            }
             .img-wrapper {
               width: 376.0537rem;
               height: 376.0537rem;
               margin-left: auto;
               margin-right: auto;
+              @include for-phone {
+                width: 1000rem;
+                height: 1000rem;
+              }
             }
           }
           &-btn {
             width: 20%;
+            @include for-phone {
+              display: none;
+            }
           }
           &-full {
             flex: 0 0 100%;
@@ -667,6 +713,9 @@ body.page-template-blog-page {
               color: $dblue;
               text-transform: uppercase;
               font-weight: $semiBold;
+              @include for-phone {
+                font-size: 220rem;
+              }
             }
           }
         }
