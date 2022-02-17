@@ -5,7 +5,7 @@
 get_header(); ?>
 
 <header class="single-page-header page-padding-x d-flex flex-wrap">
-    <h2 class="heading blue-bg w-fit-content"><?php _e('Upcoming Events', 'starter'); ?></h2>
+    <h2 class="heading blue-bg w-fit-content"><?php _e('Past Events', 'starter'); ?></h2>
 </header>
 <main id="primary" class="site-main page-padding-x">
     <div class="container">
