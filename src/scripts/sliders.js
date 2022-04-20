@@ -1,8 +1,43 @@
-import Swiper, { Pagination, Navigation, Autoplay } from "swiper";
+import Swiper, { Pagination, Navigation, Autoplay, Scrollbar } from "swiper";
 function convertRemToPixels(rem) {
   return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
 }
 jQuery(document).ready(function ($) {
+
+  if ($('.hero-home-slider').length) {
+    let options = {};
+    if ($(".hero-home-slider .swiper-slide").length == 1) {
+      options = {
+        modules: [Pagination, Autoplay],
+        slidesPerView: 1,
+        spaceBetween: convertRemToPixels(70),
+        loop: false,
+        speed: 1000,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      }
+    } else {
+      options = {
+        modules: [Pagination, Autoplay],
+        slidesPerView: 1,
+        spaceBetween: convertRemToPixels(70),
+        loop: true,
+        speed: 1000,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      }
+    }
+
+    let homeHeroSlider = new Swiper(".hero-home-slider ", options);
+
+
+  }
+
+
   let gallerySlider = new Swiper("#gallery-slider .swiper ", {
     modules: [Navigation, Autoplay],
     slidesPerView: 3,

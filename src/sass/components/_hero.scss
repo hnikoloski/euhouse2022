@@ -1,19 +1,31 @@
 .hero {
   &-home {
-    min-height: 1664.037425rem;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
-    @include for-phone {
-      min-height: auto;
-      padding-top: 1170rem;
-      padding-bottom: 1960rem;
+    &.swiper {
+      position: relative;
+      .swiper-slide {
+        padding: 223.7519rem $sidePadding 263.2376rem $sidePadding;
+        @include for-phone {
+          padding: 0 $sidePadding 0 $sidePadding;
+        }
+      }
+    }
+    .swiper-wrapper {
+      min-height: 100%;
+    }
+
+    .swiper-slide {
+      height: auto !important;
     }
     .content {
       color: #fff;
       max-width: 1690rem;
       @include for-phone {
         max-width: 100%;
+        padding-top: 350rem;
+        padding-bottom: 350rem;
       }
       .date {
         background: $blue;
