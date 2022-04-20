@@ -2,6 +2,7 @@ import Swiper, { Pagination, Navigation, Autoplay, Scrollbar } from "swiper";
 function convertRemToPixels(rem) {
   return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
 }
+// git trigger
 jQuery(document).ready(function ($) {
 
   if ($('.hero-home-slider').length) {
